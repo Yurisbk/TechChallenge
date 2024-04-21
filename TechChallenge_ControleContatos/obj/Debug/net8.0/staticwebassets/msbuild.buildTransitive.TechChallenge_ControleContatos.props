@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\TechChallenge_ControleContatos.props" />
+</Project>
