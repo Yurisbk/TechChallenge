@@ -13,11 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Service", "3 - Service"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{F5A01386-89C5-4B04-A603-B77DADFC856E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechChallenge_ControleContatos.Domain", "TechChallenge_ControleContatos.Domain\TechChallenge_ControleContatos.Domain.csproj", "{30059E35-AA86-448D-A244-D4722E2C1A8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechChallenge_ControleContatos.Domain", "TechChallenge_ControleContatos.Domain\TechChallenge_ControleContatos.Domain.csproj", "{30059E35-AA86-448D-A244-D4722E2C1A8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechChallenge_ControleContatos.Service", "TechChallenge_ControleContatos.Service\TechChallenge_ControleContatos.Service.csproj", "{8285B70E-2D47-4BC2-BC6E-C967A2BC6667}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechChallenge_ControleContatos.Service", "TechChallenge_ControleContatos.Service\TechChallenge_ControleContatos.Service.csproj", "{8285B70E-2D47-4BC2-BC6E-C967A2BC6667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechChallenge_ControleContatos.Infra", "TechChallenge_ControleContatos.Infra\TechChallenge_ControleContatos.Infra.csproj", "{F08D37A6-7226-45B9-B955-7B60B292E781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechChallenge_ControleContatos.Infra", "TechChallenge_ControleContatos.Infra\TechChallenge_ControleContatos.Infra.csproj", "{F08D37A6-7226-45B9-B955-7B60B292E781}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

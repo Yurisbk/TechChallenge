@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TechChallenge_ControleContatos.Infra.Mapping;
 using TechChallenge_ControleContatos.Service.DTO;
 using TechChallenge_ControleContatos.Service.Interface;
@@ -16,14 +17,15 @@ namespace TechChallenge_ControleContatos.Controllers
             _contacts = contacts;
         }
 
-
         [HttpGet("GetAllContacts")]
+        [Authorize]
         public async Task<IActionResult> GetAllContacts()
         {
            return Ok(await _contacts.GetContacts());
         }
 
         [HttpPost("CreateContact")]
+        [Authorize]
         public async Task<IActionResult> CreateContacts(ContactDto contact)
         {
             await _contacts.CreateContacts(contact);
@@ -31,13 +33,15 @@ namespace TechChallenge_ControleContatos.Controllers
         }
 
         [HttpPut("UpdateContact")]
-        public async Task<IActionResult> UpdateContacts(int id, [FromBody] ContactDto contact)
+        [Authorize]
+        public async Task<IActionResult> UpdateContacts([FromBody] ContactDto contact)
         {
-            _contacts.UpdateContacts(id, contact);
+            await _contacts.UpdateContacts(contact);
             return Ok();
         }
 
         [HttpDelete("DeleteContact")]
+        [Authorize]
         public async Task<IActionResult> DeleteContacts(int id)
         {
             await _contacts.DeleteContacts(id);

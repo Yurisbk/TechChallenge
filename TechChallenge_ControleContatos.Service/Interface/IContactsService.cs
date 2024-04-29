@@ -12,7 +12,7 @@ namespace TechChallenge_ControleContatos.Service.Interface
     {
         public Task<IEnumerable<Contact>> GetContacts();
         public Task CreateContacts(ContactDto contact);
-        public Task UpdateContacts(int id, ContactDto contact);
+        public Task UpdateContacts(ContactDto contact);
         public Task DeleteContacts(int id);
     }
 }
