@@ -26,7 +26,7 @@ namespace TechChallenge_ControleContatos.Service.DTO
         public string? Ddd { get; set; }
 
         [Required(ErrorMessage = "O número de telefone é obrigatório.")]
-        [MaxLength(20, ErrorMessage = "O número de telefone não pode ter mais de 20 caracteres.")]
+        [MaxLength(9, ErrorMessage = "O número de telefone não pode ter mais de 9 caracteres.")]
         public string? Phonenumber { get; set; }
 
         [Required(ErrorMessage = "O e-mail é obrigatório.")]

@@ -19,7 +19,7 @@ namespace TechChallenge_ControleContatos.Service.Service
         }
         public async Task CreateUser(string userName, string password, string role)
         {
-            await _usersRepository.CreateUser(userName, password, role);
+            await _usersRepository.CreateUser(userName, password);
         }
 
         public async Task<Users> GetUser(string userName, string password)

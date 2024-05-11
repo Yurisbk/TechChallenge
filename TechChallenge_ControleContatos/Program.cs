@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Npgsql;
 using System.Data;
+using System.Reflection;
 using System.Text;
 using TechChallenge_ControleContatos.Infra.Repository;
 using TechChallenge_ControleContatos.JWT;
@@ -48,7 +49,13 @@ namespace TechChallenge_ControleContatos
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Aula 6 - Autenticação e Autorização", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API Contacts Control", Version = "v1" });
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+
+                c.IncludeXmlComments(xmlPath);
+
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Description =

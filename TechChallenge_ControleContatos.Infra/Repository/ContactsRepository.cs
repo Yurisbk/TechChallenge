@@ -24,34 +24,8 @@ namespace TechChallenge_ControleContatos.Infra.Repository
 
         public async Task CreateContacts(string name, string ddi, string ddd, string phone, string email)
         {
-            var query = $@"INSERT INTO public.contacts(
-	                    fullname, ddi, ddd, phonenumber, email)
-	                    VALUES ('{name}','{ddi}','{ddd}','{phone}','{email}');";
-            await _dbContext.ExecuteAsync(query);
-        }
-
-        public async Task DeleteContacts(int Id)
-        {
-            var contactList = await GetContacts();
-            var contact = contactList.FirstOrDefault(x => x.id.Equals(Id));
-
-            if(contact != null)
-                await _dbContext.DeleteAsync(contact);
-        }
-
-        public async Task<IEnumerable<Contact>> GetContacts()
-        {
-            var query = @"SELECT id, fullname, ddi, ddd, phonenumber, email, region
-	                       FROM public.contacts_region_view;";
-
-            return await _dbContext.QueryAsync<Contact>(query);
-        }
-
-        public async Task UpdateContacts(int id, string? name, string? ddi, string? ddd, string? phone, string? email)
-        {
-            var contact = new Contact()
+            var contact = new Contact
             {
-                id = id,
                 fullname = name,
                 ddi = ddi,
                 ddd = ddd,
@@ -59,7 +33,45 @@ namespace TechChallenge_ControleContatos.Infra.Repository
                 email = email
             };
 
-            await _dbContext.UpdateAsync(contact);
+            await _dbContext.InsertAsync(contact);
+        }
+
+        public async Task DeleteContacts(int id)
+        {
+            var contact = await _dbContext.GetAsync<Contact>(id);
+            if (contact != null)
+                await _dbContext.DeleteAsync(contact);
+        }
+
+        public async Task<IEnumerable<Contact>> GetContacts()
+        {
+            var query = "SELECT * FROM public.contacts_region_view;";
+
+            return await _dbContext.QueryAsync<Contact>(query);
+        }
+
+        public async Task<Contact?> GetContactsById(int id)
+        {
+            var query = $"SELECT * FROM public.contacts_region_view WHERE id = {id};";
+
+            var result = await _dbContext.QueryAsync<Contact>(query);
+
+            return result?.FirstOrDefault();
+        }
+
+        public async Task UpdateContacts(int id, string? name, string? ddi, string? ddd, string? phone, string? email)
+        {
+            var contact = await _dbContext.GetAsync<Contact>(id);
+            if (contact != null)
+            {
+                contact.fullname = name ?? contact.fullname;
+                contact.ddi = ddi ?? contact.ddi;
+                contact.ddd = ddd ?? contact.ddd;
+                contact.phonenumber = phone ?? contact.phonenumber;
+                contact.email = email ?? contact.email;
+
+                await _dbContext.UpdateAsync(contact);
+            }
         }
     }
 }

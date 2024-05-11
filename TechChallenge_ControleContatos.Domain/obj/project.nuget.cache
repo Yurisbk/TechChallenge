@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wNsFkOsOj9TlvC4mpwoxx9j+cQH4egXW/fxXK8EaXiIh+YodUTIwg4iwMxkXpXSa8X/WA2RF832A2LHNqbgntg==",
+  "dgSpecHash": "5xyzKPPEDpuE/L13tV0Li1n+8hoKJ7qj+/NTrVFn5IO1SCUuM1ZhA+3fEUMOZaXDCWF/eg14gStJkpT3LLavpQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,7 @@
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "C:\\Users\\CodeZombie\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512"
+    "C:\\Users\\CodeZombie\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512"
   ],
   "logs": []
 }

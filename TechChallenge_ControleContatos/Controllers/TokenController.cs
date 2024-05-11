@@ -14,6 +14,11 @@ namespace TechChallenge_ControleContatos.Controllers
             _tokenService = tokenService;
         }
 
+        /// <summary>
+        /// Authenticate user and generate token.
+        /// </summary>
+        /// <param name="user">User credentials.</param>
+        /// <returns>Authentication token.</returns>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] UserDto user)
         {

@@ -30,7 +30,7 @@ namespace TechChallenge_ControleContatos.JWT
         {
             var userDB = await _userService.GetUser(user.Username, user.Passwordvalue);
 
-            if (userDB.username is null)
+            if (userDB is null || userDB.username is null)
                 return string.Empty;
             var tokenHandler = new JwtSecurityTokenHandler();
 

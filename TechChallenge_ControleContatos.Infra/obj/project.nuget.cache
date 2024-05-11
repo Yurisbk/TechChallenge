@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "U1ylDn5xmOJD+s2jXHnraTsYbZTH+Jf8kRVBM6Bva1FNEkXPXpQnUgO15wQJc3ToR9J2LKnnZXBBTMtSp4iqmg==",
+  "dgSpecHash": "3R57Yrj0Ans0NvQEqvstgXRDjR0qI9+cAMO6GOstIodmrXSACiktKP7DxEHS3pKNf3JC7OKeZOXPHjQUm4R6WQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Infra\\TechChallenge_ControleContatos.Infra.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,7 @@
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "C:\\Users\\CodeZombie\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512",
+    "C:\\Users\\CodeZombie\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"

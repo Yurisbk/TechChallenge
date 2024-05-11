@@ -20,47 +20,53 @@ namespace TechChallenge_ControleContatos.Infra.Repository
             _dbContext = dbContext;
         }
 
-        public async Task CreateUser(string userName, string password, string role)
+        public async Task CreateUser(string userName, string password)
         {
-            var query = $@"INSERT INTO users(username, passwordvalue, roletype) VALUES
-                         ('{userName}', '{password}', '{role}');";
+            var user = new Users
+            {
+                username = userName,
+                passwordvalue = password
+            };
 
-             await _dbContext.ExecuteAsync(query);
+            await _dbContext.InsertAsync(user);
         }
 
         public async Task<Users> GetUser(string userName, string password)
         {
-            return await _dbContext.QueryFirstOrDefaultAsync<Users>($@"Select * from users where username = '{userName}' and passwordvalue = '{password}'");
+            return await _dbContext.QueryFirstOrDefaultAsync<Users>(
+                "SELECT * FROM users WHERE username = @UserName AND passwordvalue = @Password",
+                new { UserName = userName, Password = password });
         }
 
-
-        public async Task CreateContacts(string name, string ddi, string ddd, string phone, string email)
+        public async Task CreateContact(string name, string ddi, string ddd, string phone, string email)
         {
-            var query = $@"INSERT INTO public.contacts(
-	                    fullname, ddi, ddd, phonenumber, email)
-	                    VALUES ('{name}','{ddi}','{ddd}','{phone}','{email}');";
-            await _dbContext.ExecuteAsync(query);
+            var contact = new Contact
+            {
+                fullname = name,
+                ddi = ddi,
+                ddd = ddd,
+                phonenumber = phone,
+                email = email
+            };
+
+            await _dbContext.InsertAsync(contact);
         }
 
-        public async Task DeleteContacts(int Id)
+        public async Task DeleteContact(int id)
         {
-            var contactList = await GetContacts();
-            var contact = contactList.FirstOrDefault(x => x.id.Equals(Id));
-
+            var contact = await _dbContext.GetAsync<Contact>(id);
             if (contact != null)
                 await _dbContext.DeleteAsync(contact);
         }
 
         public async Task<IEnumerable<Contact>> GetContacts()
         {
-            var query = @"SELECT * FROM public.contacts_region_view;";
-
-            return await _dbContext.QueryAsync<Contact>(query);
+            return await _dbContext.GetAllAsync<Contact>();
         }
 
-        public async Task UpdateContacts(int id, string? name, string? ddi, string? ddd, string? phone, string? email)
+        public async Task UpdateContact(int id, string name, string ddi, string ddd, string phone, string email)
         {
-            var contact = new Contact()
+            var contact = new Contact
             {
                 id = id,
                 fullname = name,

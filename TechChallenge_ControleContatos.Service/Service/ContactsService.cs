@@ -30,9 +30,13 @@ namespace TechChallenge_ControleContatos.Service.Service
 
         public async Task<IEnumerable<Contact>> GetContacts()
         {
-            var x = await _contactsRepository.GetContacts();
+            IEnumerable<Contact> contacts = await _contactsRepository.GetContacts();
+            return contacts.OrderBy(x => x.id);
+        }
 
-            return x;
+        public async Task<Contact> GetContactsById(int id)
+        {
+            return await _contactsRepository.GetContactsById(id);
         }
 
         public async Task UpdateContacts(ContactDto contacts)

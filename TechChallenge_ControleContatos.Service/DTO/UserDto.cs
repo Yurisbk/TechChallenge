@@ -15,7 +15,7 @@ namespace TechChallenge_ControleContatos.Service.DTO
         public string Username { get; set; }
 
         [Required(ErrorMessage = "A senha é obrigatória.")]
-        [MinLength(6, ErrorMessage = "A senha deve ter pelo menos 6 caracteres.")]
+        [MinLength(4, ErrorMessage = "A senha deve ter pelo menos 4 caracteres.")]
         public string Passwordvalue { get; set; }
 
         [Required(ErrorMessage = "O tipo de função é obrigatório.")]

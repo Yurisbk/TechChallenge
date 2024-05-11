@@ -11,6 +11,6 @@ namespace TechChallenge_ControleContatos.Infra.Repository
     public interface IUsersRepository
     {
         public Task<Users> GetUser(string userName, string password);
-        public Task CreateUser(string userName, string password, string role);
+        public Task CreateUser(string userName, string password);
     }
 }
