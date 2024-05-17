@@ -1,0 +1,55 @@
+﻿@page "/addeditcontact/{Id?}"
+@using TechChallenge_ControleContatos.Service.DTO
+@inject HttpClient httpClient
+@inject NavigationManager NavigationManager
+
+<h1>@(contactId == null ? "Adicionar Contato" : "Editar Contato")</h1>
+
+@if (contact == null)
+{
+    <p>Carregando...</p>
+}
+else
+{
+    <form @onsubmit="HandleSubmit">
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" class="form-control" id="name" @bind="contact.Fullname" />
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+}
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    ContactDto contact;
+    int? contactId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        contactId = Id;
+        if (contactId != null)
+        {
+            contact = await httpClient.GetFromJsonAsync<ContactDto>($"api/GetContact/{contactId}");
+        }
+        else
+        {
+            contact = new ContactDto();
+        }
+    }
+
+    private async Task HandleSubmit()
+    {
+        if (contactId != null)
+        {
+            await httpClient.PutAsJsonAsync("api/UpdateContact", contact);
+        }
+        else
+        {
+            await httpClient.PostAsJsonAsync("api/CreateContact", contact);
+        }
+        NavigationManager.NavigateTo("/listcontacts");
+    }
+}

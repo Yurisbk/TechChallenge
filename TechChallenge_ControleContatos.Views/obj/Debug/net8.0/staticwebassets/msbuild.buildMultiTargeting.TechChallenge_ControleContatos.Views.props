@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TechChallenge_ControleContatos.Views.props" />
+</Project>

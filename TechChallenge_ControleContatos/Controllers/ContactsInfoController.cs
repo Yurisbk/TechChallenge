@@ -10,11 +10,13 @@ namespace TechChallenge_ControleContatos.Controllers
     [ApiController]
     public class ContactsInfoController : ControllerBase
     {
-        public readonly IContactsService _contacts;
+        private readonly IContactsService _contacts;
+        private readonly ILogger<ContactsInfoController> _logger;
 
-        public ContactsInfoController(IContactsService contacts)
+        public ContactsInfoController(IContactsService contacts, ILogger<ContactsInfoController> logger)
         {
             _contacts = contacts;
+            _logger = logger;
         }
 
         /// <summary>
@@ -25,6 +27,7 @@ namespace TechChallenge_ControleContatos.Controllers
         [Authorize]
         public async Task<IActionResult> GetAllContacts()
         {
+            _logger.LogInformation("Iniciando busca de todos os contatos");
             return Ok(await _contacts.GetContacts());
         }
 
@@ -37,6 +40,7 @@ namespace TechChallenge_ControleContatos.Controllers
         [Authorize]
         public async Task<IActionResult> GetContact(int id)
         {
+            _logger.LogInformation("Iniciando busca de um contato por id");
             return Ok(await _contacts.GetContactsById(id));
         }
 
@@ -49,6 +53,7 @@ namespace TechChallenge_ControleContatos.Controllers
         [Authorize]
         public async Task<IActionResult> CreateContacts(ContactDto contact)
         {
+            _logger.LogInformation("Iniciando criacao de um contato");
             await _contacts.CreateContacts(contact);
             return Ok();
         }
@@ -62,6 +67,7 @@ namespace TechChallenge_ControleContatos.Controllers
         [Authorize]
         public async Task<IActionResult> UpdateContacts([FromBody] ContactDto contact)
         {
+            _logger.LogInformation("Iniciando edicao de um contato");
             await _contacts.UpdateContacts(contact);
             return Ok();
         }
@@ -75,6 +81,7 @@ namespace TechChallenge_ControleContatos.Controllers
         [Authorize]
         public async Task<IActionResult> DeleteContacts(int id)
         {
+            _logger.LogInformation("Iniciando delecao de um contato");
             await _contacts.DeleteContacts(id);
             return Ok("Deleted successfully");
         }
