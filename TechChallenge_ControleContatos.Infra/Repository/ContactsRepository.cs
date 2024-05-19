@@ -16,14 +16,17 @@ namespace TechChallenge_ControleContatos.Infra.Repository
     public class ContactsRepository : IContactsRepository
     {
         private readonly IDbConnection _dbContext;
+        private readonly IUsersRepository _userRepository;
 
-        public ContactsRepository(IDbConnection dbContext)
+        public ContactsRepository(IDbConnection dbContext, IUsersRepository userRepository)
         {
             _dbContext = dbContext;
+            _userRepository = userRepository;
         }
 
         public async Task CreateContacts(string name, string ddi, string ddd, string phone, string email)
         {
+
             var contact = new Contact
             {
                 fullname = name,
@@ -52,14 +55,16 @@ namespace TechChallenge_ControleContatos.Infra.Repository
 
         public async Task<Contact?> GetContactsById(int id)
         {
-            var query = $"SELECT * FROM public.contacts_region_view WHERE id = {id};";
+            var query = "SELECT * FROM public.contacts_region_view WHERE id = @Id;";
 
-            var result = await _dbContext.QueryAsync<Contact>(query);
+            var parameters = new { Id = id };
+
+            var result = await _dbContext.QueryAsync<Contact>(query, parameters);
 
             return result?.FirstOrDefault();
         }
 
-        public async Task UpdateContacts(int id, string? name, string? ddi, string? ddd, string? phone, string? email)
+        public async Task<Contact> UpdateContacts(int id, string? name, string? ddi, string? ddd, string? phone, string? email)
         {
             var contact = await _dbContext.GetAsync<Contact>(id);
             if (contact != null)
@@ -71,7 +76,12 @@ namespace TechChallenge_ControleContatos.Infra.Repository
                 contact.email = email ?? contact.email;
 
                 await _dbContext.UpdateAsync(contact);
+
+                return contact;
             }
+
+            return contact;
+
         }
     }
 }

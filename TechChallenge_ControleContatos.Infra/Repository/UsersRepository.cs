@@ -37,46 +37,5 @@ namespace TechChallenge_ControleContatos.Infra.Repository
                 "SELECT * FROM users WHERE username = @UserName AND passwordvalue = @Password",
                 new { UserName = userName, Password = password });
         }
-
-        public async Task CreateContact(string name, string ddi, string ddd, string phone, string email)
-        {
-            var contact = new Contact
-            {
-                fullname = name,
-                ddi = ddi,
-                ddd = ddd,
-                phonenumber = phone,
-                email = email
-            };
-
-            await _dbContext.InsertAsync(contact);
-        }
-
-        public async Task DeleteContact(int id)
-        {
-            var contact = await _dbContext.GetAsync<Contact>(id);
-            if (contact != null)
-                await _dbContext.DeleteAsync(contact);
-        }
-
-        public async Task<IEnumerable<Contact>> GetContacts()
-        {
-            return await _dbContext.GetAllAsync<Contact>();
-        }
-
-        public async Task UpdateContact(int id, string name, string ddi, string ddd, string phone, string email)
-        {
-            var contact = new Contact
-            {
-                id = id,
-                fullname = name,
-                ddi = ddi,
-                ddd = ddd,
-                phonenumber = phone,
-                email = email
-            };
-
-            await _dbContext.UpdateAsync(contact);
-        }
     }
 }

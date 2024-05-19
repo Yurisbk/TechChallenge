@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechChallenge_ControleContatos.Infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31e32504ab74557b8abb42b0925d3c4f6ed6b85b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee5711150414083d2b0a8274090fb203b6a00757")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechChallenge_ControleContatos.Infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechChallenge_ControleContatos.Infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

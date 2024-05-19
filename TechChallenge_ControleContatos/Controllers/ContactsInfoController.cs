@@ -28,7 +28,10 @@ namespace TechChallenge_ControleContatos.Controllers
         public async Task<IActionResult> GetAllContacts()
         {
             _logger.LogInformation("Iniciando busca de todos os contatos");
-            return Ok(await _contacts.GetContacts());
+            var allContacts = await _contacts.GetContacts();
+            _logger.LogInformation("Busca de todos os contatos realizada com sucesso");
+            return Ok(allContacts);
+            
         }
 
         /// <summary>
@@ -41,7 +44,9 @@ namespace TechChallenge_ControleContatos.Controllers
         public async Task<IActionResult> GetContact(int id)
         {
             _logger.LogInformation("Iniciando busca de um contato por id");
-            return Ok(await _contacts.GetContactsById(id));
+            var contact = await _contacts.GetContactsById(id);
+            _logger.LogInformation("Busca de um contato por id realizado com sucesso");
+            return Ok(contact);
         }
 
         /// <summary>
@@ -54,7 +59,16 @@ namespace TechChallenge_ControleContatos.Controllers
         public async Task<IActionResult> CreateContacts(ContactDto contact)
         {
             _logger.LogInformation("Iniciando criacao de um contato");
-            await _contacts.CreateContacts(contact);
+            var contactCreated = await _contacts.CreateContacts(contact);
+
+            if(contactCreated.Id == 0) 
+            {
+                _logger.LogError("DDD nao relacionado a uma regiao");
+                return BadRequest("DDD nao relacionado a uma regiao");
+            }
+
+            _logger.LogInformation("Contato criado com sucesso");
+
             return Ok();
         }
 
@@ -68,7 +82,16 @@ namespace TechChallenge_ControleContatos.Controllers
         public async Task<IActionResult> UpdateContacts([FromBody] ContactDto contact)
         {
             _logger.LogInformation("Iniciando edicao de um contato");
-            await _contacts.UpdateContacts(contact);
+            var contactUpdate = await _contacts.UpdateContacts(contact);
+
+            if (contactUpdate == null) 
+            {
+                _logger.LogError("O contato editado não existe");
+                return BadRequest("O contato editado não existe");
+            }
+
+            _logger.LogInformation("Contato editado com sucesso");
+
             return Ok();
         }
 
@@ -83,7 +106,8 @@ namespace TechChallenge_ControleContatos.Controllers
         {
             _logger.LogInformation("Iniciando delecao de um contato");
             await _contacts.DeleteContacts(id);
-            return Ok("Deleted successfully");
+            _logger.LogInformation("Contato deletado com sucesso");
+            return Ok("Contato deletado com sucesso");
         }
     }
 }

@@ -11,3 +11,16 @@ C:\Users\CodeZombie\source\repos\TechChallenge_ControleContatos\TechChallenge_Co
 C:\Users\CodeZombie\source\repos\TechChallenge_ControleContatos\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\refint\TechChallenge_ControleContatos.Infra.dll
 C:\Users\CodeZombie\source\repos\TechChallenge_ControleContatos\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\TechChallenge_ControleContatos.Infra.pdb
 C:\Users\CodeZombie\source\repos\TechChallenge_ControleContatos\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\ref\TechChallenge_ControleContatos.Infra.dll
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\bin\Debug\net8.0\TechChallenge_ControleContatos.Infra.deps.json
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\bin\Debug\net8.0\TechChallenge_ControleContatos.Infra.dll
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\bin\Debug\net8.0\TechChallenge_ControleContatos.Infra.pdb
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\TechChallenge_ControleContatos.Infra.csproj.AssemblyReference.cache
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\TechChallenge_ControleContatos.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\TechChallenge_ControleContatos.Infra.AssemblyInfoInputs.cache
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\TechChallenge_ControleContatos.Infra.AssemblyInfo.cs
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\TechChallenge_ControleContatos.Infra.csproj.CoreCompileInputs.cache
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\TechChallenge_ControleContatos.Infra.sourcelink.json
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\TechChallenge_ControleContatos.Infra.dll
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\refint\TechChallenge_ControleContatos.Infra.dll
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\TechChallenge_ControleContatos.Infra.pdb
+C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\ref\TechChallenge_ControleContatos.Infra.dll

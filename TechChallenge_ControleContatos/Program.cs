@@ -93,6 +93,8 @@ namespace TechChallenge_ControleContatos
             builder.Services.AddScoped<IContactsRepository, ContactsRepository>();
             builder.Services.AddScoped<IUsersService, UserService>();
             builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+            builder.Services.AddScoped<IRegionsRepository, RegionsRepository>();
+            builder.Services.AddScoped<IRegionsService, RegionsService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
 
             var app = builder.Build();

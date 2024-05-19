@@ -6586,11 +6586,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj",
+      "projectUniqueName": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj",
       "projectName": "TechChallenge_ControleContatos",
-      "projectPath": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj",
+      "projectPath": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj",
       "packagesPath": "C:\\Users\\CodeZombie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos\\obj\\",
+      "outputPath": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6611,8 +6611,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Service\\TechChallenge_ControleContatos.Service.csproj": {
-              "projectPath": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Service\\TechChallenge_ControleContatos.Service.csproj"
+            "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos.Service\\TechChallenge_ControleContatos.Service.csproj": {
+              "projectPath": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos.Service\\TechChallenge_ControleContatos.Service.csproj"
             }
           }
         }
