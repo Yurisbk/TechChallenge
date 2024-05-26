@@ -61,7 +61,7 @@ namespace TechChallenge_ControleContatos.Controllers
             _logger.LogInformation("Iniciando criacao de um contato");
             var contactCreated = await _contacts.CreateContacts(contact);
 
-            if(contactCreated.Id == 0) 
+            if(contactCreated.Fullname is null) 
             {
                 _logger.LogError("DDD nao relacionado a uma regiao");
                 return BadRequest("DDD nao relacionado a uma regiao");

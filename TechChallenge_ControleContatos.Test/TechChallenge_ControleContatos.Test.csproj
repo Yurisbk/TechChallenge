@@ -18,6 +18,7 @@
     <ProjectReference Include="..\TechChallenge_ControleContatos.Infra\TechChallenge_ControleContatos.Infra.csproj" />
     <ProjectReference Include="..\TechChallenge_ControleContatos.Service\TechChallenge_ControleContatos.Service.csproj" />
     <ProjectReference Include="..\TechChallenge_ControleContatos.Domain\TechChallenge_ControleContatos.Domain.csproj" />
+    <ProjectReference Include="..\TechChallenge_ControleContatos\TechChallenge_ControleContatos.csproj" />
   </ItemGroup>
 
   <ItemGroup>

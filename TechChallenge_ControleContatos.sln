@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechChallenge_ControleConta
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{45CC4EBD-C304-4DF9-8495-C9A32A38DED7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechChallenge_ControleContatos.Test", "TechChallenge_ControleContatos.Test\TechChallenge_ControleContatos.Test.csproj", "{23E47D1B-857B-47FE-B13C-2006AB930AA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechChallenge_ControleContatos.Test", "TechChallenge_ControleContatos.Test\TechChallenge_ControleContatos.Test.csproj", "{23E47D1B-857B-47FE-B13C-2006AB930AA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
