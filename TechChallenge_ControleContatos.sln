@@ -13,11 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Service", "3 - Service"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{F5A01386-89C5-4B04-A603-B77DADFC856E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechChallenge_ControleContatos.Domain", "TechChallenge_ControleContatos.Domain\TechChallenge_ControleContatos.Domain.csproj", "{30059E35-AA86-448D-A244-D4722E2C1A8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechChallenge_ControleContatos.Domain", "TechChallenge_ControleContatos.Domain\TechChallenge_ControleContatos.Domain.csproj", "{30059E35-AA86-448D-A244-D4722E2C1A8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechChallenge_ControleContatos.Service", "TechChallenge_ControleContatos.Service\TechChallenge_ControleContatos.Service.csproj", "{8285B70E-2D47-4BC2-BC6E-C967A2BC6667}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechChallenge_ControleContatos.Service", "TechChallenge_ControleContatos.Service\TechChallenge_ControleContatos.Service.csproj", "{8285B70E-2D47-4BC2-BC6E-C967A2BC6667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechChallenge_ControleContatos.Infra", "TechChallenge_ControleContatos.Infra\TechChallenge_ControleContatos.Infra.csproj", "{F08D37A6-7226-45B9-B955-7B60B292E781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechChallenge_ControleContatos.Infra", "TechChallenge_ControleContatos.Infra\TechChallenge_ControleContatos.Infra.csproj", "{F08D37A6-7226-45B9-B955-7B60B292E781}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{45CC4EBD-C304-4DF9-8495-C9A32A38DED7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechChallenge_ControleContatos.Test", "TechChallenge_ControleContatos.Test\TechChallenge_ControleContatos.Test.csproj", "{23E47D1B-857B-47FE-B13C-2006AB930AA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{F08D37A6-7226-45B9-B955-7B60B292E781}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F08D37A6-7226-45B9-B955-7B60B292E781}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F08D37A6-7226-45B9-B955-7B60B292E781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23E47D1B-857B-47FE-B13C-2006AB930AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E47D1B-857B-47FE-B13C-2006AB930AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E47D1B-857B-47FE-B13C-2006AB930AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E47D1B-857B-47FE-B13C-2006AB930AA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{30059E35-AA86-448D-A244-D4722E2C1A8B} = {48512BAF-BB15-4535-B4B0-F20DB2DEC041}
 		{8285B70E-2D47-4BC2-BC6E-C967A2BC6667} = {7463C927-A10A-4B3D-B91D-3CE7110FB4D3}
 		{F08D37A6-7226-45B9-B955-7B60B292E781} = {F5A01386-89C5-4B04-A603-B77DADFC856E}
+		{23E47D1B-857B-47FE-B13C-2006AB930AA3} = {45CC4EBD-C304-4DF9-8495-C9A32A38DED7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A6C2BDC-777F-483D-961C-9FF54C367FD6}

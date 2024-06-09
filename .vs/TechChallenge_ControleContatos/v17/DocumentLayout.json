@@ -1,42 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\",
+  "WorkspaceRootPath": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9A1E60D-4121-4C78-BCBB-5825B7FCECFC}|TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_controlecontatos\\techchallenge_controlecontatos\\controllers\\contactsinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9A1E60D-4121-4C78-BCBB-5825B7FCECFC}|TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj|solutionrelative:techchallenge_controlecontatos\\controllers\\contactsinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9A1E60D-4121-4C78-BCBB-5825B7FCECFC}|TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_fase1\\techchallenge_controlecontatos\\techchallenge_controlecontatos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C9A1E60D-4121-4C78-BCBB-5825B7FCECFC}|TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj|solutionrelative:techchallenge_controlecontatos\\techchallenge_controlecontatos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8285B70E-2D47-4BC2-BC6E-C967A2BC6667}|TechChallenge_ControleContatos.Service\\TechChallenge_ControleContatos.Service.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_controlecontatos\\techchallenge_controlecontatos.service\\dto\\contactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8285B70E-2D47-4BC2-BC6E-C967A2BC6667}|TechChallenge_ControleContatos.Service\\TechChallenge_ControleContatos.Service.csproj|solutionrelative:techchallenge_controlecontatos.service\\dto\\contactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08D37A6-7226-45B9-B955-7B60B292E781}|TechChallenge_ControleContatos.Infra\\TechChallenge_ControleContatos.Infra.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_controlecontatos\\techchallenge_controlecontatos.infra\\entity\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08D37A6-7226-45B9-B955-7B60B292E781}|TechChallenge_ControleContatos.Infra\\TechChallenge_ControleContatos.Infra.csproj|solutionrelative:techchallenge_controlecontatos.infra\\entity\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08D37A6-7226-45B9-B955-7B60B292E781}|TechChallenge_ControleContatos.Infra\\TechChallenge_ControleContatos.Infra.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_controlecontatos\\techchallenge_controlecontatos.infra\\repository\\icontactsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F08D37A6-7226-45B9-B955-7B60B292E781}|TechChallenge_ControleContatos.Infra\\TechChallenge_ControleContatos.Infra.csproj|solutionrelative:techchallenge_controlecontatos.infra\\repository\\icontactsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9A1E60D-4121-4C78-BCBB-5825B7FCECFC}|TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_controlecontatos\\techchallenge_controlecontatos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9A1E60D-4121-4C78-BCBB-5825B7FCECFC}|TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj|solutionrelative:techchallenge_controlecontatos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F08D37A6-7226-45B9-B955-7B60B292E781}|TechChallenge_ControleContatos.Infra\\TechChallenge_ControleContatos.Infra.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_controlecontatos\\techchallenge_controlecontatos.infra\\repository\\contactsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F08D37A6-7226-45B9-B955-7B60B292E781}|TechChallenge_ControleContatos.Infra\\TechChallenge_ControleContatos.Infra.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_fase1\\techchallenge_controlecontatos.infra\\repository\\contactsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F08D37A6-7226-45B9-B955-7B60B292E781}|TechChallenge_ControleContatos.Infra\\TechChallenge_ControleContatos.Infra.csproj|solutionrelative:techchallenge_controlecontatos.infra\\repository\\contactsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8285B70E-2D47-4BC2-BC6E-C967A2BC6667}|TechChallenge_ControleContatos.Service\\TechChallenge_ControleContatos.Service.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_controlecontatos\\techchallenge_controlecontatos.service\\service\\contactsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9A1E60D-4121-4C78-BCBB-5825B7FCECFC}|TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_fase1\\techchallenge_controlecontatos\\controllers\\contactsinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9A1E60D-4121-4C78-BCBB-5825B7FCECFC}|TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj|solutionrelative:techchallenge_controlecontatos\\controllers\\contactsinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_fase1\\techchallenge_controlecontatos.test\\controller\\contactsinfocontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|solutionrelative:techchallenge_controlecontatos.test\\controller\\contactsinfocontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8285B70E-2D47-4BC2-BC6E-C967A2BC6667}|TechChallenge_ControleContatos.Service\\TechChallenge_ControleContatos.Service.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_fase1\\techchallenge_controlecontatos.service\\service\\contactsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8285B70E-2D47-4BC2-BC6E-C967A2BC6667}|TechChallenge_ControleContatos.Service\\TechChallenge_ControleContatos.Service.csproj|solutionrelative:techchallenge_controlecontatos.service\\service\\contactsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8285B70E-2D47-4BC2-BC6E-C967A2BC6667}|TechChallenge_ControleContatos.Service\\TechChallenge_ControleContatos.Service.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_controlecontatos\\techchallenge_controlecontatos.service\\interface\\icontactsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8285B70E-2D47-4BC2-BC6E-C967A2BC6667}|TechChallenge_ControleContatos.Service\\TechChallenge_ControleContatos.Service.csproj|solutionrelative:techchallenge_controlecontatos.service\\interface\\icontactsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9A1E60D-4121-4C78-BCBB-5825B7FCECFC}|TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_fase1\\techchallenge_controlecontatos\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9A1E60D-4121-4C78-BCBB-5825B7FCECFC}|TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj|solutionrelative:techchallenge_controlecontatos\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9A1E60D-4121-4C78-BCBB-5825B7FCECFC}|TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_controlecontatos\\techchallenge_controlecontatos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C9A1E60D-4121-4C78-BCBB-5825B7FCECFC}|TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj|solutionrelative:techchallenge_controlecontatos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|c:\\users\\codezombie\\source\\repos\\techchallenge_fase1\\techchallenge_controlecontatos.test\\controller\\tokencontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|solutionrelative:techchallenge_controlecontatos.test\\controller\\tokencontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,124 +38,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IContactsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Infra\\Repository\\IContactsRepository.cs",
-              "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Infra\\Repository\\IContactsRepository.cs",
-              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Infra\\Repository\\IContactsRepository.cs",
-              "RelativeToolTip": "TechChallenge_ControleContatos.Infra\\Repository\\IContactsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T21:41:55.852Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Contact.cs",
-              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Infra\\Entity\\Contact.cs",
-              "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Infra\\Entity\\Contact.cs",
-              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Infra\\Entity\\Contact.cs",
-              "RelativeToolTip": "TechChallenge_ControleContatos.Infra\\Entity\\Contact.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T21:05:37.818Z",
+              "DocumentIndex": 0,
+              "Title": "TechChallenge_ControleContatos",
+              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj",
+              "RelativeDocumentMoniker": "TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj",
+              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj",
+              "RelativeToolTip": "TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-08T23:30:09.321Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ContactDto.cs",
-              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Service\\DTO\\ContactDto.cs",
-              "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Service\\DTO\\ContactDto.cs",
-              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Service\\DTO\\ContactDto.cs",
-              "RelativeToolTip": "TechChallenge_ControleContatos.Service\\DTO\\ContactDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T20:45:30.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ContactsInfoController.cs",
-              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos\\Controllers\\ContactsInfoController.cs",
-              "RelativeDocumentMoniker": "TechChallenge_ControleContatos\\Controllers\\ContactsInfoController.cs",
-              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos\\Controllers\\ContactsInfoController.cs",
-              "RelativeToolTip": "TechChallenge_ControleContatos\\Controllers\\ContactsInfoController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBYAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T17:24:42.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "ContactsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Infra\\Repository\\ContactsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos.Infra\\Repository\\ContactsRepository.cs",
               "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Infra\\Repository\\ContactsRepository.cs",
-              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Infra\\Repository\\ContactsRepository.cs",
+              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos.Infra\\Repository\\ContactsRepository.cs",
               "RelativeToolTip": "TechChallenge_ControleContatos.Infra\\Repository\\ContactsRepository.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwA8AAAAmAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwCYAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T18:48:52.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IContactsService.cs",
-              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Service\\Interface\\IContactsService.cs",
-              "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Service\\Interface\\IContactsService.cs",
-              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Service\\Interface\\IContactsService.cs",
-              "RelativeToolTip": "TechChallenge_ControleContatos.Service\\Interface\\IContactsService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T17:10:12.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos\\appsettings.json",
-              "RelativeDocumentMoniker": "TechChallenge_ControleContatos\\appsettings.json",
-              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos\\appsettings.json",
-              "RelativeToolTip": "TechChallenge_ControleContatos\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-21T20:17:57.043Z",
+              "WhenOpened": "2024-05-26T17:15:07.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos\\Program.cs",
-              "RelativeDocumentMoniker": "TechChallenge_ControleContatos\\Program.cs",
-              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos\\Program.cs",
-              "RelativeToolTip": "TechChallenge_ControleContatos\\Program.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCcAAAAhAAAA",
+              "Title": "ContactsService.cs",
+              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos.Service\\Service\\ContactsService.cs",
+              "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Service\\Service\\ContactsService.cs",
+              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos.Service\\Service\\ContactsService.cs",
+              "RelativeToolTip": "TechChallenge_ControleContatos.Service\\Service\\ContactsService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACoAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T19:00:50.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-26T01:39:12.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TokenController.cs",
+              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos\\Controllers\\TokenController.cs",
+              "RelativeDocumentMoniker": "TechChallenge_ControleContatos\\Controllers\\TokenController.cs",
+              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos\\Controllers\\TokenController.cs",
+              "RelativeToolTip": "TechChallenge_ControleContatos\\Controllers\\TokenController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T23:59:47.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContactsInfoController.cs",
+              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos\\Controllers\\ContactsInfoController.cs",
+              "RelativeDocumentMoniker": "TechChallenge_ControleContatos\\Controllers\\ContactsInfoController.cs",
+              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos\\Controllers\\ContactsInfoController.cs",
+              "RelativeToolTip": "TechChallenge_ControleContatos\\Controllers\\ContactsInfoController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowD8AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T23:57:01.079Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ContactsService.cs",
-              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Service\\Service\\ContactsService.cs",
-              "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Service\\Service\\ContactsService.cs",
-              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Service\\Service\\ContactsService.cs",
-              "RelativeToolTip": "TechChallenge_ControleContatos.Service\\Service\\ContactsService.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAkwCUAAAA1AAAA",
+              "Title": "TokenControllerTest.cs",
+              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos.Test\\Controller\\TokenControllerTest.cs",
+              "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Test\\Controller\\TokenControllerTest.cs",
+              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos.Test\\Controller\\TokenControllerTest.cs",
+              "RelativeToolTip": "TechChallenge_ControleContatos.Test\\Controller\\TokenControllerTest.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBIAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T18:40:00.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-19T23:56:54.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ContactsInfoControllerTest.cs",
+              "DocumentMoniker": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos.Test\\Controller\\ContactsInfoControllerTest.cs",
+              "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Test\\Controller\\ContactsInfoControllerTest.cs",
+              "ToolTip": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos.Test\\Controller\\ContactsInfoControllerTest.cs",
+              "RelativeToolTip": "TechChallenge_ControleContatos.Test\\Controller\\ContactsInfoControllerTest.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAmwEwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T23:56:33.52Z"
             }
           ]
         }

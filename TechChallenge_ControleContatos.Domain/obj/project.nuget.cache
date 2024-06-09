@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wNsFkOsOj9TlvC4mpwoxx9j+cQH4egXW/fxXK8EaXiIh+YodUTIwg4iwMxkXpXSa8X/WA2RF832A2LHNqbgntg==",
+  "dgSpecHash": "/3UpyEgtJgUYWq9BWrN09+bEi9X2jLjUItMJt1CueCCrJ0W6Enc8NFtSfq79whOvN4+p6RKDetSFKGHA3I1kpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj",
+  "projectFilePath": "C:\\Users\\CodeZombie\\source\\repos\\TechChallenge_Fase1\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.4\\microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.4\\microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",
@@ -15,7 +15,7 @@
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "C:\\Users\\CodeZombie\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512"
+    "C:\\Users\\CodeZombie\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512"
   ],
   "logs": []
 }
