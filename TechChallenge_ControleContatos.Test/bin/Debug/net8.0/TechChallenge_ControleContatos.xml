@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TechChallenge_ControleContatos</name>
+    </assembly>
+    <members>
+        <member name="M:TechChallenge_ControleContatos.Controllers.ContactsInfoController.GetAllContacts">
+            <summary>
+            Get all contacts.
+            </summary>
+            <returns>List of contacts.</returns>
+        </member>
+        <member name="M:TechChallenge_ControleContatos.Controllers.ContactsInfoController.GetContact(System.Int32)">
+            <summary>
+            Get a contact by ID.
+            </summary>
+            <param name="id">Contact ID.</param>
+            <returns>Contact details.</returns>
+        </member>
+        <member name="M:TechChallenge_ControleContatos.Controllers.ContactsInfoController.CreateContacts(TechChallenge_ControleContatos.Service.DTO.ContactDto)">
+            <summary>
+            Create a new contact.
+            </summary>
+            <param name="contact">Contact details to create.</param>
+            <returns>Success response.</returns>
+        </member>
+        <member name="M:TechChallenge_ControleContatos.Controllers.ContactsInfoController.UpdateContacts(TechChallenge_ControleContatos.Service.DTO.ContactDto)">
+            <summary>
+            Update an existing contact.
+            </summary>
+            <param name="contact">Updated contact details.</param>
+            <returns>Success response.</returns>
+        </member>
+        <member name="M:TechChallenge_ControleContatos.Controllers.ContactsInfoController.DeleteContacts(System.Int32)">
+            <summary>
+            Delete a contact by ID.
+            </summary>
+            <param name="id">ID of the contact to delete.</param>
+            <returns>Success response.</returns>
+        </member>
+        <member name="M:TechChallenge_ControleContatos.Controllers.TokenController.Post(TechChallenge_ControleContatos.Service.DTO.UserDto)">
+            <summary>
+            Authenticate user and generate token.
+            </summary>
+            <param name="user">User credentials.</param>
+            <returns>Authentication token.</returns>
+        </member>
+    </members>
+</doc>
