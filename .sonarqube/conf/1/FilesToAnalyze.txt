@@ -1,9 +1,0 @@
-﻿C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Entity\Contact.cs
-C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Entity\Regions.cs
-C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Entity\Users.cs
-C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Repository\ContactsRepository.cs
-C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Repository\IContactsRepository.cs
-C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Repository\IRegionsRepository.cs
-C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Repository\IUsersRepository.cs
-C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Repository\RegionsRepository.cs
-C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Repository\UsersRepository.cs
