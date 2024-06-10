@@ -74,9 +74,6 @@ jobs:
         with:
           java-version: 17
 
-      - name: Check SonarQube server connectivity
-        run: ping -c 5 ${{ secrets.SONAR_HOST_URL }}
-
       - name: Cache SonarQube packages
         uses: actions/cache@v1
         with:
@@ -97,6 +94,9 @@ jobs:
         run: |
           mkdir -p .sonar/scanner
           dotnet tool update dotnet-sonarscanner --tool-path .sonar/scanner
+
+      - name: Check SonarQube server connectivity
+        run: ping -c 5 ${{ secrets.SONAR_HOST_URL }}
 
       - name: Build and analyze
         run: |
