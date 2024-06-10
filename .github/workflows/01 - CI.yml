@@ -38,5 +38,5 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          tags: latest
+          tags: 'yurisbk/techchallenge_imagem:latest'
           push: true
