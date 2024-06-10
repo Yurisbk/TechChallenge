@@ -1,0 +1,13 @@
+﻿C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\Controllers\ContactsInfoController.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\Controllers\TokenController.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\JWT\ITokenService.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\JWT\TokenService.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\Program.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\obj\Debug\net8.0\TechChallenge_ControleContatos.GlobalUsings.g.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\obj\Debug\net8.0\TechChallenge_ControleContatos.AssemblyInfo.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\obj\Debug\net8.0\TechChallenge_ControleContatos.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\appsettings.Development.json
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\appsettings.json
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\TechChallenge_ControleContatos.http
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\Properties\launchSettings.json

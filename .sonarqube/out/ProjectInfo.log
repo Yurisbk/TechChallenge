@@ -1,0 +1,27 @@
+Product projects
+---------------------------------------
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\TechChallenge_ControleContatos.Infra.csproj
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Service\TechChallenge_ControleContatos.Service.csproj
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos\TechChallenge_ControleContatos.csproj
+
+
+Test projects
+---------------------------------------
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Test\TechChallenge_ControleContatos.Test.csproj
+
+
+Invalid projects
+---------------------------------------
+{none}
+
+
+Skipped projects
+---------------------------------------
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\TechChallenge_ControleContatos.Domain.csproj
+
+
+Excluded projects
+---------------------------------------
+{none}
+
+

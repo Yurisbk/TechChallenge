@@ -1,0 +1,13 @@
+ü
+ìC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\TechChallenge_ControleContatos.Infra.AssemblyInfo.csutf-8ô
+çC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8°
+ïC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\obj\Debug\net8.0\TechChallenge_ControleContatos.Infra.GlobalUsings.g.csutf-8t
+kC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Repository\UsersRepository.csutf-8v
+mC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Repository\RegionsRepository.csutf-8u
+lC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Repository\IUsersRepository.csutf-8w
+nC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Repository\IRegionsRepository.csutf-8x
+oC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Repository\IContactsRepository.csutf-8w
+nC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Repository\ContactsRepository.csutf-8f
+]C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Entity\Users.csutf-8h
+_C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Entity\Regions.csutf-8h
+_C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Infra\Entity\Contact.csutf-8

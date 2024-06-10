@@ -24,3 +24,16 @@ C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleConta
 C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\refint\TechChallenge_ControleContatos.Domain.dll
 C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\TechChallenge_ControleContatos.Domain.pdb
 C:\Users\CodeZombie\source\repos\TechChallenge_Fase1\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\ref\TechChallenge_ControleContatos.Domain.dll
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\bin\Debug\net8.0\TechChallenge_ControleContatos.Domain.deps.json
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\bin\Debug\net8.0\TechChallenge_ControleContatos.Domain.dll
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\bin\Debug\net8.0\TechChallenge_ControleContatos.Domain.pdb
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\TechChallenge_ControleContatos.Domain.csproj.AssemblyReference.cache
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\TechChallenge_ControleContatos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\TechChallenge_ControleContatos.Domain.AssemblyInfoInputs.cache
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\TechChallenge_ControleContatos.Domain.AssemblyInfo.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\TechChallenge_ControleContatos.Domain.csproj.CoreCompileInputs.cache
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\TechChallenge_ControleContatos.Domain.sourcelink.json
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\TechChallenge_ControleContatos.Domain.dll
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\refint\TechChallenge_ControleContatos.Domain.dll
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\TechChallenge_ControleContatos.Domain.pdb
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Domain\obj\Debug\net8.0\ref\TechChallenge_ControleContatos.Domain.dll

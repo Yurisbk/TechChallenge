@@ -1,0 +1,8 @@
+﻿C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Service\DTO\ContactDto.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Service\DTO\UserDto.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Service\Interface\IContactsService.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Service\Interface\IRegionsService.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Service\Interface\IUsersService.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Service\Service\ContactsService.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Service\Service\RegionsService.cs
+C:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Service\Service\UserService.cs

@@ -1,0 +1,10 @@
+ù
+ëC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Test\obj\Debug\net8.0\TechChallenge_ControleContatos.Test.AssemblyInfo.csutf-8ò
+åC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Test\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8ü
+ìC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Test\obj\Debug\net8.0\TechChallenge_ControleContatos.Test.GlobalUsings.g.csutf-8Ç
+wC:\Users\CodeZombie\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8p
+gC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Test\Service\UserServiceTest.csutf-8s
+jC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Test\Service\RegionsServiceTest.csutf-8s
+jC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Test\Service\ContactServiceTest.csutf-8w
+nC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Test\Controller\TokenControllerTest.csutf-8~
+uC:\Users\CodeZombie\source\TechChallenge\TechChallenge_ControleContatos.Test\Controller\ContactsInfoControllerTest.csutf-8
