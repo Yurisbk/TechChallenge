@@ -86,6 +86,6 @@ jobs:
 
       - name: Build and analyze
         run: |
-          .sonar/scanner/dotnet-sonarscanner begin /k:"Techchallenge" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          .sonar/scanner/dotnet-sonarscanner begin /k:"Techchallenge" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}" /d:distributio=manual
           dotnet build
           .sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
