@@ -93,15 +93,9 @@ jobs:
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         run: |
           mkdir -p .sonar/scanner
-          dotnet tool update dotnet-sonarscanner --tool-path .sonar/scanner
-
-      - name: Instalação do SonarQube
-        run: |
-          sudo apt update -y
-          sudo apt install -y unzip
           wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.7.1.418.zip
           unzip sonar-scanner-cli-4.7.1.418.zip
-          sudo mv sonar-scanner-4.7.1.418 /opt/sonar-scanner
+          mv sonar-scanner-4.7.1.418 /opt/sonar-scanner
           export PATH="$PATH:/opt/sonar-scanner/bin"
 
       - name: Check SonarQube server connectivity
