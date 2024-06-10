@@ -51,7 +51,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: '5.0.x'  # Ajuste para a versão apropriada do .NET
+          dotnet-version: '8.0.204'  # Ajuste para a versão apropriada do .NET
 
       - name: Restore dependencies
         run: dotnet restore
