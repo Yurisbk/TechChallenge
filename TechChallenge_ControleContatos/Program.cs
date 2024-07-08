@@ -9,6 +9,7 @@ using TechChallenge_ControleContatos.Infra.Repository;
 using TechChallenge_ControleContatos.JWT;
 using TechChallenge_ControleContatos.Service.Interface;
 using TechChallenge_ControleContatos.Service.Service;
+using Prometheus;
 
 
 namespace TechChallenge_ControleContatos
@@ -107,12 +108,11 @@ namespace TechChallenge_ControleContatos
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
+            app.UseMetricServer();
+            app.UseHttpMetrics();
             app.MapControllers();
-
+            app.MapMetrics();
             app.Run();
         }
     }
