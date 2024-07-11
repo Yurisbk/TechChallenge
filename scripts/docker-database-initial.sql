@@ -21,6 +21,18 @@ create table users(
     roletype varchar
 );
 
+INSERT INTO contacts (fullname, ddi, ddd, phonenumber, email) VALUES
+('John Doe', '1', '202', '5551234', 'john.doe@example.com'),
+('Jane Smith', '44', '20', '79461234', 'jane.smith@example.co.uk'),
+('Carlos Souza', '55', '11', '99887766', 'carlos.souza@example.com.br'),
+('Marie Curie', '33', '1', '2345678', 'marie.curie@example.fr'),
+('Yuki Tanaka', '81', '3', '12345678', 'yuki.tanaka@example.jp'),
+('Liam O Connor', '353', '1', '87654321', 'liam.oconnor@example.ie'),
+('Ayesha Khan', '91', '22', '12345678', 'ayesha.khan@example.in'),
+('Hans Müller', '49', '30', '98765432', 'hans.muller@example.de'),
+('Chen Wei', '86', '10', '87654321', 'chen.wei@example.cn'),
+('Fatima Al-Farsi', '971', '4', '43218765', 'fatima.alfarsi@example.ae');
+
 INSERT INTO users(username, passwordvalue, roletype) VALUES
     ('Admin', '1234', 'admin'),
     ('NotAdmin', '4321', 'employer');

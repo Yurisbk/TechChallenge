@@ -2,13 +2,13 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the workflow on push or pull request events but only for the "develop" branch
   push:
     branches:
       - "develop"
   pull_request:
     branches:
-      - "deevelop"
+      - "develop"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   dockerhub:
-    name: Executando primeiro job
+    name: Dockerhub
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -42,11 +42,33 @@ jobs:
           push: true
 
   build_and_test:
-    name: Executando segundo job
+    name: Build and tests
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: root
+          POSTGRES_DB: root
+        ports:
+          - 5432:5432
+        options: >-
+          --mount type=bind,source=${{ github.workspace }}/scripts,target=/docker-entrypoint-initdb.d
+        # Comando não é necessário, pois o comando padrão do contêiner do PostgreSQL é "postgres"
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Wait for PostgreSQL to start
+        run: |
+          until pg_isready -h localhost -p 5432; do
+            echo "Waiting for PostgreSQL to start..."
+            sleep 1
+          done
+        shell: bash
 
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v2
@@ -61,3 +83,62 @@ jobs:
 
       - name: Run tests
         run: dotnet test --no-build --verbosity normal
+
+      - name: Run database setup script
+        run: |
+          psql -h localhost -U root -d root -f /docker-entrypoint-initdb.d/your-script.sql
+        env:
+          PGPASSWORD: root
+        shell: bash
+
+  integration_tests:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: root
+          POSTGRES_DB: root
+        ports:
+          - 5432:5432
+        options: >-
+          --mount type=bind,source=${{ github.workspace }}/scripts,target=/docker-entrypoint-initdb.d
+        # Comando não é necessário, pois o comando padrão do contêiner do PostgreSQL é "postgres"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Wait for PostgreSQL to start
+        run: |
+          until pg_isready -h localhost -p 5432; do
+            echo "Waiting for PostgreSQL to start..."
+            sleep 1
+          done
+        shell: bash
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '8.0.204'  # Ajuste para a versão apropriada do .NET
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore
+        working-directory: .\IntegratedTest  # Define o diretório de trabalho para restore
+
+      - name: Run integration tests
+        run: dotnet test --no-build --verbosity normal --filter TestCategory=Integration
+        working-directory: .\IntegratedTest 
+
+      - name: Run database setup script
+        run: |
+          psql -h localhost -U root -d root -f /docker-entrypoint-initdb.d/your-script.sql
+        env:
+          PGPASSWORD: root
+        shell: bash
