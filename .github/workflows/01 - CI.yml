@@ -29,62 +29,24 @@ jobs:
           docker push yurisbk/techchallenge_imagem:latest
 
   build_and_test:
-    name: Executando segundo job
+    name: Build and Test
     runs-on: ubuntu-latest
 
-    services:
-      postgres:
-        image: postgres:latest
-        env:
-          POSTGRES_USER: root
-          POSTGRES_PASSWORD: root
-          POSTGRES_DB: root
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd "pg_isready -U root -d root"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Setup Docker Compose
-        run: sudo apt-get update && sudo apt-get install docker-compose -y
-
-      - name: Build and Run Docker Compose
-        run: |
-          docker-compose up -d --build
-
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: '8.0.204'
+          dotnet-version: '8.0.x'
 
-      - name: Restore dependencies
-        run: dotnet restore
-
-      - name: Build
-        run: dotnet build --no-restore
+      - name: Checkout do código
+        uses: actions/checkout@v2  
 
       - name: Run unit tests
-        run: dotnet test --no-build --filter "Category=Unity" --verbosity detailed --logger "trx;LogFileName=unit_tests.trx"
+        run: dotnet test --filter "Category=Unity"
 
       - name: Run integration tests
-        env:
-          ConnectionStrings__DefaultConnection: "Host=localhost;Port=5432;Username=root;Password=root;Database=root"
-        run: dotnet test --no-build --filter "Category=Integration" --verbosity detailed --logger "trx;LogFileName=integration_tests.trx"
+        run: dotnet test --filter "Category=Integration"
 
-      - name: Upload test results
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-results
-          path: |
-            **/unit_tests.trx
-            **/integration_tests.trx
+      - name: Publish API
+        run: dotnet publish ./src/TechChallenge_ControleContatos -c Release -o ./publish
 
-      - name: Teardown Docker Compose
-        if: always()
-        run: docker-compose down
