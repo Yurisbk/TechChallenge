@@ -23,7 +23,7 @@ jobs:
           username: 'yurisbk'
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      - name: Build and Push Docker Image
+      - name: Build and Push
         run: |
           docker build -t yurisbk/techchallenge_imagem:latest .
           docker push yurisbk/techchallenge_imagem:latest
@@ -31,6 +31,7 @@ jobs:
   build_and_test:
     name: Executando segundo job
     runs-on: ubuntu-latest
+
     services:
       postgres:
         image: postgres:latest
@@ -57,7 +58,7 @@ jobs:
         run: |
           docker-compose up -d --build
 
-      - name: Setup .NET Core SDK
+      - name: Setup .NET Core
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: '8.0.204'
