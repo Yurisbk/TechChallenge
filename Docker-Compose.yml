@@ -23,61 +23,61 @@ services:
       - postgres
 
   sql:
-     image: mysql:latest
-     environment:
-       MYSQL_ROOT_PASSWORD: zabbix
-       MYSQL_DB: zabbix
-       MYSQL_USER: zabbix
-       MYSQL_PASSWORD: zabbix
-     volumes:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: zabbix
+      MYSQL_DB: zabbix
+      MYSQL_USER: zabbix
+      MYSQL_PASSWORD: zabbix
+    volumes:
       - ./zabbix-mysql:/home/grey/mysql
-     restart: always
+    restart: always
 
   zabbix:
-     image: zabbix/zabbix-server-mysql:latest
-     environment:
-          DB_SERVER_HOST: sql
-          MYSQL_DB: zabbix
-          MYSQL_USER: root
-          MYSQL_PASSWORD: zabbix
-          ZBX_VALUECACHESIZE: 64M
-          ZBX_CACHESIZE: 128M
-          ZBX_TRENDCACHESIZE: 128M
-          ZBX_ALLOWUNSUPPORTEDDBVERSIONS: "1" 
-     volumes:
+    image: zabbix/zabbix-server-mysql:latest
+    environment:
+      DB_SERVER_HOST: sql
+      MYSQL_DB: zabbix
+      MYSQL_USER: root
+      MYSQL_PASSWORD: zabbix
+      ZBX_VALUECACHESIZE: 64M
+      ZBX_CACHESIZE: 128M
+      ZBX_TRENDCACHESIZE: 128M
+      ZBX_ALLOWUNSUPPORTEDDBVERSIONS: "1"
+    volumes:
       - ./zabbix-serv:/home/grey/zabbix-server
-     restart: always
-     depends_on:
-       - sql
-    
+    restart: always
+    depends_on:
+      - sql
+
   zabbix-web:
-     image:  zabbix/zabbix-web-apache-mysql
-     environment:
-        DB_SERVER_HOST: sql
-        MYSQL_USER: root
-        MYSQL_PASSWORD: zabbix
-        MYSQL_DB: zabbix
-        ZBX_SERVER_HOST: zabbix
-        ZBX_SERVER_PORT: 10051
-        PHP_TZ: America/Sao_Paulo
-     ports:
+    image: zabbix/zabbix-web-apache-mysql
+    environment:
+      DB_SERVER_HOST: sql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: zabbix
+      MYSQL_DB: zabbix
+      ZBX_SERVER_HOST: zabbix
+      ZBX_SERVER_PORT: 10051
+      PHP_TZ: America/Sao_Paulo
+    ports:
       - "8999:8080"
-     restart: always
-     depends_on:
-       - zabbix-agenr
+    restart: always
+    depends_on:
+      - zabbix-agenr
 
   zabbix-agenr:
-     image:  zabbix/zabbix-agent
-     environment:
-        DB_SERVER_HOST: sql
-        MYSQL_USER: root
-        MYSQL_PASSWORD: zabbix
-        MYSQL_DB: zabbix
-        ZBX_SERVER_PORT: 10051
-        ZBX_SERVER_HOST: zabbix
-     restart: always
-     depends_on:
-       - zabbix
+    image: zabbix/zabbix-agent
+    environment:
+      DB_SERVER_HOST: sql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: zabbix
+      MYSQL_DB: zabbix
+      ZBX_SERVER_PORT: 10051
+      ZBX_SERVER_HOST: zabbix
+    restart: always
+    depends_on:
+      - zabbix
 
   grafana:
     image: grafana/grafana:latest
@@ -102,3 +102,10 @@ services:
       - '--storage.tsdb.path=/prometheus'
     ports:
       - 9090:9090
+
+  webapp:
+    image: yurisbk/techchallenge_imagem:latest
+    ports:
+      - "5217:80"
+    depends_on:
+      - postgres
