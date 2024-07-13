@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|c:\\users\\codezombie\\downloads\\tc2\\techchallenge\\techchallenge_controlecontatos.test\\controller\\tokencontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|solutionrelative:techchallenge_controlecontatos.test\\controller\\tokencontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|c:\\users\\codezombie\\downloads\\tc2\\techchallenge\\techchallenge_controlecontatos.test\\controller\\contactsinfocontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|solutionrelative:techchallenge_controlecontatos.test\\controller\\contactsinfocontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|c:\\users\\codezombie\\downloads\\tc2\\techchallenge\\techchallenge_controlecontatos.test\\controller\\tokencontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|solutionrelative:techchallenge_controlecontatos.test\\controller\\tokencontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|c:\\users\\codezombie\\downloads\\tc2\\techchallenge\\techchallenge_controlecontatos.test\\service\\userservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,30 +42,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TokenControllerTest.cs",
               "DocumentMoniker": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Test\\Controller\\TokenControllerTest.cs",
               "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Test\\Controller\\TokenControllerTest.cs",
               "ToolTip": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Test\\Controller\\TokenControllerTest.cs",
               "RelativeToolTip": "TechChallenge_ControleContatos.Test\\Controller\\TokenControllerTest.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACgAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-13T14:50:49.832Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ContactsInfoControllerTest.cs",
               "DocumentMoniker": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Test\\Controller\\ContactsInfoControllerTest.cs",
               "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Test\\Controller\\ContactsInfoControllerTest.cs",
               "ToolTip": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Test\\Controller\\ContactsInfoControllerTest.cs",
               "RelativeToolTip": "TechChallenge_ControleContatos.Test\\Controller\\ContactsInfoControllerTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHgAAAAgAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowHgAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-13T14:50:19.434Z",
               "EditorCaption": ""
@@ -80,8 +80,7 @@
               "RelativeToolTip": "TechChallenge_ControleContatos.Test\\Service\\UserServiceTest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T14:50:02.916Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-13T14:50:02.916Z"
             },
             {
               "$type": "Document",
@@ -93,8 +92,7 @@
               "RelativeToolTip": "TechChallenge_ControleContatos.Test\\Service\\RegionsServiceTest.cs",
               "ViewState": "AQIAADgAAAAAAAAAAAAwwHUAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T14:49:40.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-13T14:49:40.519Z"
             },
             {
               "$type": "Document",
@@ -106,8 +104,7 @@
               "RelativeToolTip": "TechChallenge_ControleContatos.Test\\Service\\ContactServiceTest.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAHUAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T14:48:50.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-13T14:48:50.571Z"
             },
             {
               "$type": "Document",
@@ -143,8 +140,7 @@
               "RelativeToolTip": "TechChallenge_ControleContatos.Test\\Integrated\\IntegratedTest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T14:37:01.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-13T14:37:01.312Z"
             }
           ]
         }
