@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MK17yxfUBbAMpiD7kP6gfkadARD/mbunlVBjfst5geh3qw051bRn/M9giRBvHvsk9oL4t+pQn+TGlcSyLtE5Gw==",
+  "dgSpecHash": "7ELLl7xBAuZ36U1j/kDXC2P6jU5SJq3+HwRK76bpX8gSTAfoerdO6T8EvXhQ07O8rol//Y5otAr7oPoGqeMyNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CodeZombie\\source\\repos\\teste\\TechChallenge\\TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj",
+  "projectFilePath": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CodeZombie\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
