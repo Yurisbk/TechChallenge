@@ -11,7 +11,7 @@ on:
 
 jobs:
   dockerhub:
-    name: Executando primeiro job
+    name: Dockerhub
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,7 +31,7 @@ jobs:
           push: true
 
   build_and_test:
-    name: Executando segundo job
+    name: Build and Test
     runs-on: ubuntu-latest
     services:
       postgres:
