@@ -12,7 +12,12 @@ namespace TechChallenge_ControleContatos.Test.Integrated
         [Fact, Trait("Category", "Integration")]
         public async Task CapturaComSucessoTodosContatos()
         {
-            var httpClient = new HttpClient();
+            var handler = new HttpClientHandler()
+            {
+                ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
+            };
+
+            var httpClient = new HttpClient(handler);
             var tokenClient = new TokenClient();
             var contactsClient = new ContactsClient(httpClient);
 
@@ -21,7 +26,7 @@ namespace TechChallenge_ControleContatos.Test.Integrated
             int roleType = 0;
 
             string token = await tokenClient.GetTokenAsync(username, password, roleType);
-            Console.WriteLine($"Token: {token}");
+
 
             var x = await contactsClient.GetAllContacts(token);
 
