@@ -24,15 +24,28 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Build and Push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          tags: 'yurisbk/techchallenge_imagem:latest'
-          push: true
+        run: |
+          docker build -t yurisbk/techchallenge_imagem:latest .
+          docker push yurisbk/techchallenge_imagem:latest
 
   build_and_test:
     name: Executando segundo job
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: root
+          POSTGRES_DB: root
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U root -d root"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
