@@ -9,7 +9,7 @@ namespace TechChallenge_ControleContatos.Test.Integrated
 {
     public class IntegratedTest
     {
-        [Fact, Category("Integration")]
+        [Fact, Trait("Category", "Integration")]
         public async Task CapturaComSucessoTodosContatos()
         {
             var httpClient = new HttpClient();

@@ -22,7 +22,7 @@ namespace TechChallenge_ControleContatos.Test.Service
             _userService = new UserService(_usersRepositoryMock.Object);
         }
 
-        [Fact, Category("Unity")]
+        [Fact, Trait("Category", "Unity")]
         public async Task CreateUser_ShouldCallRepository()
         {
             // Arrange
@@ -40,7 +40,7 @@ namespace TechChallenge_ControleContatos.Test.Service
             _usersRepositoryMock.Verify(r => r.CreateUser(userName, password), Times.Once);
         }
 
-        [Fact, Category("Unity")]
+        [Fact, Trait("Category", "Unity")]
         public async Task GetUser_ShouldReturnUser()
         {
             // Arrange
@@ -60,7 +60,7 @@ namespace TechChallenge_ControleContatos.Test.Service
             Assert.Equal(password, result.passwordvalue);
         }
 
-        [Fact, Category("Unity")]
+        [Fact, Trait("Category", "Unity")]
         public async Task GetUser_ShouldReturnNull_WhenUserNotFound()
         {
             // Arrange
