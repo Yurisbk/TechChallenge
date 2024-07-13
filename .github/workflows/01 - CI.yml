@@ -23,7 +23,7 @@ jobs:
           username: 'yurisbk'
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      - name: Build and Push
+      - name: Build and Push Docker Image
         run: |
           docker build -t yurisbk/techchallenge_imagem:latest .
           docker push yurisbk/techchallenge_imagem:latest
@@ -31,6 +31,20 @@ jobs:
   build_and_test:
     name: Executando segundo job
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: root
+          POSTGRES_DB: root
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U root -d root"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
       - name: Checkout code
@@ -40,9 +54,10 @@ jobs:
         run: sudo apt-get update && sudo apt-get install docker-compose -y
 
       - name: Build and Run Docker Compose
-        run: docker-compose up -d --build
+        run: |
+          docker-compose up -d --build
 
-      - name: Setup .NET Core
+      - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: '8.0.204'

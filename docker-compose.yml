@@ -88,24 +88,4 @@ services:
     volumes:
       - ./grafana-data:/var/lib/grafana
 
-  prometheus:
-    image: prom/prometheus
-    user: root
-    container_name: prometheus
-    hostname: prometheus
-    restart: unless-stopped
-    volumes:
-      - ./docker/prometheus/config:/etc/prometheus
-      - ./docker/prometheus/data:/prometheus
-    command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
-      - '--storage.tsdb.path=/prometheus'
-    ports:
-      - 9090:9090
 
-  webapp:
-    image: yurisbk/techchallenge_imagem:latest
-    ports:
-      - "5217:80"
-    depends_on:
-      - postgres
