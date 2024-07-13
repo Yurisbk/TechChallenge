@@ -2,6 +2,7 @@
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             _controller = new TokenController(_tokenServiceMock.Object);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task Post_ShouldReturnOkResult_WithToken_WhenUserAuthenticationIsSuccessful()
         {
             // Arrange
@@ -38,7 +39,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             Assert.Equal(expectedToken, okResult.Value);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task Post_ShouldReturnUnauthorizedResult_WhenUserAuthenticationFails()
         {
             // Arrange

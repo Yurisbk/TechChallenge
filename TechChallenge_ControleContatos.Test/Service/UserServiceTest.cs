@@ -1,6 +1,7 @@
 ﻿using Moq;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace TechChallenge_ControleContatos.Test.Service
             _userService = new UserService(_usersRepositoryMock.Object);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task CreateUser_ShouldCallRepository()
         {
             // Arrange
@@ -39,7 +40,7 @@ namespace TechChallenge_ControleContatos.Test.Service
             _usersRepositoryMock.Verify(r => r.CreateUser(userName, password), Times.Once);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task GetUser_ShouldReturnUser()
         {
             // Arrange
@@ -59,7 +60,7 @@ namespace TechChallenge_ControleContatos.Test.Service
             Assert.Equal(password, result.passwordvalue);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task GetUser_ShouldReturnNull_WhenUserNotFound()
         {
             // Arrange

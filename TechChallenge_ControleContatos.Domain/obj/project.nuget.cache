@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1Pwxrd2D2JwQ0tNTMYqi0qFKzRrnKy/hVN2pUjzSUpo8nxhnkzPulvvs609ArHtBybcgaewAPwF0X1RCYwJmVA==",
+  "dgSpecHash": "eq3tFYt5C0IAb3sUAjmdY8TvIRxEjgKoYV8bb1n9KtnGV+lCW+8gI14a/4tD6u+k/m6C1ClMHHSN4iQKxrBY0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CodeZombie\\source\\TechChallenge\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj",
+  "projectFilePath": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.4\\microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.4\\microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",

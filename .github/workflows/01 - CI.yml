@@ -1,39 +1,28 @@
 name: CI
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches:
-      - "main"
+      - "develop"
   pull_request:
     branches:
-      - "main"
-
-  # Allows you to run this workflow manually from the Actions tab
+      - "develop"
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   dockerhub:
     name: Executando primeiro job
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Runs Login on Docker
       - name: Docker Login
         uses: docker/login-action@v3
         with:
           username: 'yurisbk'
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      # Runs build and push image
       - name: Build and Push
         uses: docker/build-push-action@v5
         with:
@@ -44,6 +33,21 @@ jobs:
   build_and_test:
     name: Executando segundo job
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: root
+          POSTGRES_DB: root
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U root -d root"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -51,7 +55,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: '8.0.204'  # Ajuste para a versão apropriada do .NET
+          dotnet-version: '8.0.204'
 
       - name: Restore dependencies
         run: dotnet restore
@@ -59,5 +63,8 @@ jobs:
       - name: Build
         run: dotnet build --no-restore
 
-      - name: Run tests
-        run: dotnet test --no-build --verbosity normal
+      - name: Run unit tests
+        run: dotnet test --no-build --filter Category=Unity --verbosity normal
+
+      - name: Run integration tests
+        run: dotnet test --no-build --filter Category=Integration --verbosity normal

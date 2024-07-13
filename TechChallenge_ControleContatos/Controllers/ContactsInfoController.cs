@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Prometheus;
 using TechChallenge_ControleContatos.Infra.Mapping;
 using TechChallenge_ControleContatos.Service.DTO;
 using TechChallenge_ControleContatos.Service.Interface;
@@ -12,6 +13,11 @@ namespace TechChallenge_ControleContatos.Controllers
     {
         private readonly IContactsService _contacts;
         private readonly ILogger<ContactsInfoController> _logger;
+        private static readonly Counter SuccessfulRequestsCounter =
+        Metrics.CreateCounter("successful_requests_total", "Total number of successful requests");
+        private static readonly Counter ErrorRequestsCounter =
+        Metrics.CreateCounter("error_requests_total", "Total number of error requests");
+
 
         public ContactsInfoController(IContactsService contacts, ILogger<ContactsInfoController> logger)
         {
@@ -29,6 +35,7 @@ namespace TechChallenge_ControleContatos.Controllers
         {
             _logger.LogInformation("Iniciando busca de todos os contatos");
             var allContacts = await _contacts.GetContacts();
+            SuccessfulRequestsCounter.Inc();
             _logger.LogInformation("Busca de todos os contatos realizada com sucesso");
             return Ok(allContacts);
             
@@ -45,6 +52,7 @@ namespace TechChallenge_ControleContatos.Controllers
         {
             _logger.LogInformation("Iniciando busca de um contato por id");
             var contact = await _contacts.GetContactsById(id);
+            SuccessfulRequestsCounter.Inc();
             _logger.LogInformation("Busca de um contato por id realizado com sucesso");
             return Ok(contact);
         }
@@ -64,11 +72,12 @@ namespace TechChallenge_ControleContatos.Controllers
             if(contactCreated.Fullname is null) 
             {
                 _logger.LogError("DDD nao relacionado a uma regiao");
+                ErrorRequestsCounter.Inc();
                 return BadRequest("DDD nao relacionado a uma regiao");
             }
 
             _logger.LogInformation("Contato criado com sucesso");
-
+            SuccessfulRequestsCounter.Inc();
             return Ok();
         }
 
@@ -87,11 +96,12 @@ namespace TechChallenge_ControleContatos.Controllers
             if (contactUpdate == null) 
             {
                 _logger.LogError("O contato editado não existe");
+                ErrorRequestsCounter.Inc();
                 return BadRequest("O contato editado não existe");
             }
 
             _logger.LogInformation("Contato editado com sucesso");
-
+            SuccessfulRequestsCounter.Inc();
             return Ok();
         }
 
@@ -107,6 +117,7 @@ namespace TechChallenge_ControleContatos.Controllers
             _logger.LogInformation("Iniciando delecao de um contato");
             await _contacts.DeleteContacts(id);
             _logger.LogInformation("Contato deletado com sucesso");
+            SuccessfulRequestsCounter.Inc();
             return Ok("Contato deletado com sucesso");
         }
     }

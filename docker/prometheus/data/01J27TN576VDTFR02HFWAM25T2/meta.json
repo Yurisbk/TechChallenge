@@ -1,0 +1,17 @@
+{
+	"ulid": "01J27TN576VDTFR02HFWAM25T2",
+	"minTime": 1720373869507,
+	"maxTime": 1720375200000,
+	"stats": {
+		"numSamples": 62382,
+		"numSeries": 730,
+		"numChunks": 730
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01J27TN576VDTFR02HFWAM25T2"
+		]
+	},
+	"version": 1
+}
