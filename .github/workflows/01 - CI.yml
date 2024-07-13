@@ -41,7 +41,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install docker-compose -y
 
       - name: Build and Run Docker Compose
-        run: Docker-Compose up -d --build
+        run: docker-compose up -d --build
 
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v2
