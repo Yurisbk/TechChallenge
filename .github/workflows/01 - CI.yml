@@ -11,7 +11,7 @@ on:
 
 jobs:
   dockerhub:
-    name: Dockerhub
+    name: Executando primeiro job
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,41 +24,47 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Build and Push
-        run: |
-          docker build -t yurisbk/techchallenge_imagem:latest .
-          docker push yurisbk/techchallenge_imagem:latest
-          
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          tags: 'yurisbk/techchallenge_imagem:latest'
+          push: true
+
   build_and_test:
-    name: Build and Test
+    name: Executando segundo job
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: root
+          POSTGRES_DB: root
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U root -d root"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup .NET Core SDK
+      - name: Setup .NET Core
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '8.0.204'
 
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Build and Tag Docker Image
-        run: |
-          docker build -t yurisbk/techchallenge_imagem:latest .
-      
+      - name: Build
+        run: dotnet build --no-restore
+
       - name: Run unit tests
-        run: dotnet test --filter "Category=Unity"
+        run: dotnet test --no-build --filter Category=Unity --verbosity normal
 
       - name: Run integration tests
-        run: dotnet test --filter "Category=Integration"
-
-      - name: Publish API
-        run: dotnet publish ./src/TechChallenge_ControleContatos -c Release -o ./publish
-
-      - name: Upload API artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: api-artifact
-          path: ./publish
+        run: dotnet test --no-build --filter Category=Integration --verbosity normal
