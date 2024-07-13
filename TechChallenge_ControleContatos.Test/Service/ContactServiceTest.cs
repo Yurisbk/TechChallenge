@@ -1,6 +1,7 @@
 ﻿using Moq;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace TechChallenge_ControleContatos.Test.Service
             _contactsService = new ContactsService(_contactsRepositoryMock.Object, _regionsRepositoryMock.Object);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task CreateContacts_ShouldReturnEmptyDto_WhenRegionIsNull()
         {
             // Arrange
@@ -42,7 +43,7 @@ namespace TechChallenge_ControleContatos.Test.Service
             Assert.Null(result.Fullname);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task CreateContacts_ShouldCallRepositoryAndReturnDto_WhenRegionIsNotNull()
         {
             // Arrange
@@ -62,7 +63,7 @@ namespace TechChallenge_ControleContatos.Test.Service
             _contactsRepositoryMock.Verify(r => r.CreateContacts(contactDto.Fullname, contactDto.Ddi, contactDto.Ddd, contactDto.Phonenumber, contactDto.Email), Times.Once);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task DeleteContacts_ShouldCallRepository()
         {
             // Arrange
@@ -77,7 +78,7 @@ namespace TechChallenge_ControleContatos.Test.Service
             _contactsRepositoryMock.Verify(r => r.DeleteContacts(contactId), Times.Once);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task GetContacts_ShouldReturnOrderedDistinctContacts()
         {
             // Arrange
@@ -98,7 +99,7 @@ namespace TechChallenge_ControleContatos.Test.Service
             Assert.Equal("Bob", result.First().fullname);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task GetContactsById_ShouldReturnContact()
         {
             // Arrange
@@ -114,7 +115,7 @@ namespace TechChallenge_ControleContatos.Test.Service
             Assert.Equal(contact.fullname, result.fullname);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task UpdateContacts_ShouldReturnUpdatedContact()
         {
             // Arrange

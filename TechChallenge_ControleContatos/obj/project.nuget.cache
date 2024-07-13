@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YiBpPB+L4bPcXXXU2FCp2ke9MoZx6QiDhjBnx6TKT7tpa01wLgzbcGB7X5r3pyi9TM8Dip8K21hIR1zMbDbSQQ==",
+  "dgSpecHash": "gzciU7VdZXwBnC7+XZJSFewZEtWJ+3kF66insgGYqaQZsbnyt/PvcXTnqaCZw3xD+LJj95aFqYxv3vQRlG/IZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CodeZombie\\source\\repos\\teste\\TechChallenge\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj",
+  "projectFilePath": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos\\TechChallenge_ControleContatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CodeZombie\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\CodeZombie\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",

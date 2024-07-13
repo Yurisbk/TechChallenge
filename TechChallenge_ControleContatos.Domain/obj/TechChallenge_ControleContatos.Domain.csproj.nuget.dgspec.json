@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CodeZombie\\source\\repos\\teste\\TechChallenge\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj": {}
+    "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CodeZombie\\source\\repos\\teste\\TechChallenge\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj": {
+    "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CodeZombie\\source\\repos\\teste\\TechChallenge\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj",
         "projectName": "TechChallenge_ControleContatos.Domain",
-        "projectPath": "C:\\Users\\CodeZombie\\source\\repos\\teste\\TechChallenge\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj",
+        "projectPath": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Domain\\TechChallenge_ControleContatos.Domain.csproj",
         "packagesPath": "C:\\Users\\CodeZombie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CodeZombie\\source\\repos\\teste\\TechChallenge\\TechChallenge_ControleContatos.Domain\\obj\\",
+        "outputPath": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

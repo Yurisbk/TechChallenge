@@ -20,5 +20,9 @@ WORKDIR /app
 # Copiar os arquivos compilados do estágio anterior
 COPY --from=build /app/out .
 
+# Configurar o PostgreSQL
+RUN apt-get update && \
+    apt-get install -y postgresql-client
+
 # Definir o comando de entrada
 ENTRYPOINT ["dotnet", "TechChallenge_ControleContatos.dll"]

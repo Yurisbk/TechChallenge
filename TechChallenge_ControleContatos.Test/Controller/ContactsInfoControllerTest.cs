@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             _controller = new ContactsInfoController(_contactsServiceMock.Object, _loggerMock.Object);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task GetAllContacts_ShouldReturnOkResult_WithListOfContacts()
         {
             // Arrange
@@ -42,7 +43,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             Assert.Single(returnContacts);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task GetContact_ShouldReturnOkResult_WithContact()
         {
             // Arrange
@@ -58,7 +59,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             Assert.Equal(contact.id, returnContact.id);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task CreateContacts_ShouldReturnOkResult_WhenContactIsCreated()
         {
             // Arrange
@@ -72,7 +73,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             var okResult = Assert.IsType<OkResult>(result);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task CreateContacts_ShouldReturnBadRequest_WhenContactCreationFails()
         {
             // Arrange
@@ -87,7 +88,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             Assert.Equal("DDD nao relacionado a uma regiao", badRequestResult.Value);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task UpdateContacts_ShouldReturnOkResult_WhenContactIsUpdated()
         {
             // Arrange
@@ -102,7 +103,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             var okResult = Assert.IsType<OkResult>(result);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task UpdateContacts_ShouldReturnBadRequest_WhenContactDoesNotExist()
         {
             // Arrange
@@ -117,7 +118,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             Assert.Equal("O contato editado não existe", badRequestResult.Value);
         }
 
-        [Fact]
+        [Fact, Category("Unity")]
         public async Task DeleteContacts_ShouldReturnOkResult_WhenContactIsDeleted()
         {
             // Arrange
