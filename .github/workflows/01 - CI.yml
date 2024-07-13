@@ -64,7 +64,7 @@ jobs:
         run: dotnet build --no-restore
 
       - name: Run unit tests
-        run: dotnet test --no-build --filter Category=Unity --verbosity normal
+        run: dotnet test --no-build --filter Unity --verbosity normal
 
       - name: Run integration tests
-        run: dotnet test --no-build --filter Category=Integration --verbosity normal
+        run: dotnet test --no-build --filter Integration --verbosity normal
