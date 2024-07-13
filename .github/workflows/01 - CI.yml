@@ -27,20 +27,27 @@ jobs:
         run: |
           docker build -t yurisbk/techchallenge_imagem:latest .
           docker push yurisbk/techchallenge_imagem:latest
-
+          
   build_and_test:
     name: Build and Test
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup .NET Core
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: '8.0.x'
 
-      - name: Checkout do código
-        uses: actions/checkout@v2  
+      - name: Restore dependencies
+        run: dotnet restore
 
+      - name: Build and Tag Docker Image
+        run: |
+          docker build -t yurisbk/techchallenge_imagem:latest .
+      
       - name: Run unit tests
         run: dotnet test --filter "Category=Unity"
 
@@ -50,3 +57,8 @@ jobs:
       - name: Publish API
         run: dotnet publish ./src/TechChallenge_ControleContatos -c Release -o ./publish
 
+      - name: Upload API artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: api-artifact
+          path: ./publish
