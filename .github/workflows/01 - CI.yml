@@ -48,7 +48,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
         volumes:
-          - ./scripts:/docker-database-initial.sql
+          - ./scripts/docker-database-initial.sql:/docker-entrypoint-initdb.d/docker-database-initial.sql
 
     steps:
       - name: Checkout code
@@ -65,11 +65,16 @@ jobs:
       - name: Build
         run: dotnet build --no-restore
 
-      - name: Wait for PostgreSQL to be ready and scripts to be executed
+      - name: Wait for PostgreSQL to be ready and script to complete
         run: |
-          until psql -h localhost -U root -d root -c "SELECT 1 FROM public.contacts_region_view LIMIT 1;" 2>/dev/null; do
-            echo "Waiting for contacts_region_view to be available..."
-            sleep 2
+          for i in {1..30}; do
+            if pg_isready -h localhost -p 5432 -U root; then
+              if [ "$(psql -h localhost -U root -d root -c "SELECT to_regclass('public.contacts_region_view') IS NOT NULL AS exists" -t -A)" = "t" ]; then
+                break
+              fi
+            fi
+            echo "Waiting for PostgreSQL and script completion..."
+            sleep 5
           done
 
       - name: Run unit tests
