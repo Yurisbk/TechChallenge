@@ -34,6 +34,23 @@ jobs:
     name: Executando segundo job
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: root
+          POSTGRES_DB: root
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U root -d root"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        volumes:
+          - ./scripts:/docker-entrypoint-initdb.d
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -43,39 +60,21 @@ jobs:
         with:
           dotnet-version: '8.0.204'
 
-      - name: Install PostgreSQL
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y postgresql postgresql-contrib
-
-      - name: Modify PostgreSQL authentication method
-        run: |
-          sudo sed -i "s/peer/md5/" /etc/postgresql/*/main/pg_hba.conf
-          sudo sed -i "s/ident/md5/" /etc/postgresql/*/main/pg_hba.conf
-
-      - name: Restart PostgreSQL
-        run: sudo service postgresql restart
-
-      - name: Setup PostgreSQL
-        run: |
-          sudo -u postgres psql -c "CREATE USER root WITH PASSWORD 'root';"
-          sudo -u postgres psql -c "CREATE DATABASE root;"
-          sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE root TO root;"
-
-      - name: Run database initialization script
-        run: psql -U root -d root -f scripts/docker-database-initial.sql
-        env:
-          PGPASSWORD: root
+      - name: Install PostgreSQL client
+        run: sudo apt-get update && sudo apt-get install -y postgresql-client
 
       - name: Wait for PostgreSQL to be ready
         run: |
           for i in {1..30}; do
-            if psql -U root -d root -c '\q'; then
+            if pg_isready -h localhost -p 5432 -U root -d root; then
               break
             fi
             echo "Waiting for PostgreSQL..."
             sleep 1
           done
+
+      - name: Run database initialization script
+        run: psql -h localhost -U root -d root -f scripts/docker-database-initial.sql
         env:
           PGPASSWORD: root
 
