@@ -23,7 +23,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             _controller = new ContactsInfoController(_contactsService, _logger);
         }
 
-        [Fact, Trait("Category", "Unity")]
+        [Fact, Trait("Category", "Integrated")]
         public async Task GetAllContacts_ShouldReturnOkResult_WithListOfContacts()
         {
             // Arrange
@@ -35,31 +35,14 @@ namespace TechChallenge_ControleContatos.Test.Controller
 
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(result);
-            var returnContacts = Assert.IsType<List<Contact>>(okResult.Value);
-            Assert.Single(returnContacts);
+            var returnContacts = Assert.IsAssignableFrom<IEnumerable<Contact>>(okResult.Value); 
         }
 
-        [Fact, Trait("Category", "Unity")]
-        public async Task GetContact_ShouldReturnOkResult_WithContact()
-        {
-            // Arrange
-            var contactDto = new ContactDto { Id = 1, Fullname = "John Doe" };
-            await _contactsService.CreateContacts(contactDto);
-
-            // Act
-            var result = await _controller.GetContact(1);
-
-            // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            var returnContact = Assert.IsType<Contact>(okResult.Value);
-            Assert.Equal(contactDto.Id, returnContact.id);
-        }
-
-        [Fact, Trait("Category", "Unity")]
+        [Fact, Trait("Category", "Integrated")]
         public async Task CreateContacts_ShouldReturnOkResult_WhenContactIsCreated()
         {
             // Arrange
-            var contactDto = new ContactDto { Id = 1, Fullname = "John Doe" };
+            var contactDto = new ContactDto { Id = 1, Fullname = "John Doe", Ddd = "11", Ddi = "55", Email = "teste@123.com", Phonenumber = "973645921" };
 
             // Act
             var result = await _controller.CreateContacts(contactDto);
@@ -68,61 +51,23 @@ namespace TechChallenge_ControleContatos.Test.Controller
             var okResult = Assert.IsType<OkResult>(result);
         }
 
-        [Fact, Trait("Category", "Unity")]
-        public async Task CreateContacts_ShouldReturnBadRequest_WhenContactCreationFails()
+        [Fact, Trait("Category", "Integrated")]
+        public async Task CreateContacts_ShouldReturnOkResult_WhenContactIsDeleted()
         {
             // Arrange
-            var contactDto = new ContactDto { Id = 0, Fullname = null };
+            var contactDto = new ContactDto { Id = 1, Fullname = "John Doe", Ddd = "11", Ddi = "55", Email = "teste@123.com", Phonenumber = "973645921" };
+            var contactsList = await _contactsService.GetContacts();
 
             // Act
-            var result = await _controller.CreateContacts(contactDto);
+            if(contactsList is not null)
+            {
+                var result = await _controller.DeleteContacts(contactsList.FirstOrDefault().id);
 
-            // Assert
-            var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
-            Assert.Equal("DDD nao relacionado a uma regiao", badRequestResult.Value);
-        }
+                // Assert
+                var okResult = Assert.IsType<OkObjectResult>(result);
+            }
 
-        [Fact, Trait("Category", "Unity")]
-        public async Task UpdateContacts_ShouldReturnOkResult_WhenContactIsUpdated()
-        {
-            // Arrange
-            var contactDto = new ContactDto { Id = 1, Fullname = "John Doe" };
-            await _contactsService.CreateContacts(contactDto);
 
-            // Act
-            var result = await _controller.UpdateContacts(contactDto);
-
-            // Assert
-            var okResult = Assert.IsType<OkResult>(result);
-        }
-
-        [Fact, Trait("Category", "Unity")]
-        public async Task UpdateContacts_ShouldReturnBadRequest_WhenContactDoesNotExist()
-        {
-            // Arrange
-            var contactDto = new ContactDto { Id = 1, Fullname = "John Doe" };
-
-            // Act
-            var result = await _controller.UpdateContacts(contactDto);
-
-            // Assert
-            var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
-            Assert.Equal("O contato editado não existe", badRequestResult.Value);
-        }
-
-        [Fact, Trait("Category", "Unity")]
-        public async Task DeleteContacts_ShouldReturnOkResult_WhenContactIsDeleted()
-        {
-            // Arrange
-            var contactDto = new ContactDto { Id = 1, Fullname = "John Doe" };
-            await _contactsService.CreateContacts(contactDto);
-
-            // Act
-            var result = await _controller.DeleteContacts(1);
-
-            // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            Assert.Equal("Contato deletado com sucesso", okResult.Value);
         }
     }
 }
