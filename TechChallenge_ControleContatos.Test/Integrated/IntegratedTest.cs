@@ -23,7 +23,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             _controller = new ContactsInfoController(_contactsService, _logger);
         }
 
-        [Fact, Trait("Category", "Integrated")]
+        [Fact, Trait("Category", "Integration")]
         public async Task GetAllContacts_ShouldReturnOkResult_WithListOfContacts()
         {
             // Arrange
@@ -38,7 +38,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             var returnContacts = Assert.IsAssignableFrom<IEnumerable<Contact>>(okResult.Value); 
         }
 
-        [Fact, Trait("Category", "Integrated")]
+        [Fact, Trait("Category", "Integration")]
         public async Task CreateContacts_ShouldReturnOkResult_WhenContactIsCreated()
         {
             // Arrange
@@ -51,7 +51,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             var okResult = Assert.IsType<OkResult>(result);
         }
 
-        [Fact, Trait("Category", "Integrated")]
+        [Fact, Trait("Category", "Integration")]
         public async Task CreateContacts_ShouldReturnOkResult_WhenContactIsDeleted()
         {
             // Arrange
