@@ -48,8 +48,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y postgresql postgresql-contrib
 
-      - name: Start PostgreSQL
-        run: sudo service postgresql start
+      - name: Modify PostgreSQL authentication method
+        run: |
+          sudo sed -i "s/peer/md5/" /etc/postgresql/*/main/pg_hba.conf
+          sudo sed -i "s/ident/md5/" /etc/postgresql/*/main/pg_hba.conf
+
+      - name: Restart PostgreSQL
+        run: sudo service postgresql restart
 
       - name: Setup PostgreSQL
         run: |
