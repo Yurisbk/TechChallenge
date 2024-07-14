@@ -48,7 +48,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
         volumes:
-          - ./scripts:/docker-entrypoint-initdb.d
+          - ./scripts:/docker-database-initial.sql
 
     steps:
       - name: Checkout code
