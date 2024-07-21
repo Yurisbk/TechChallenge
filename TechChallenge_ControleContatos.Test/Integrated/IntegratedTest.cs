@@ -27,7 +27,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
         public async Task GetAllContacts_ShouldReturnOkResult_WithListOfContacts()
         {
             // Arrange
-            var contactDto = new ContactDto { Id = 1, Fullname = "John Doe" };
+            var contactDto = new ContactDto { Id = 1, Fullname = "Mano Doe", Ddd = "11", Ddi = "55", Email = "teste@123.com", Phonenumber = "973645921" };
             await _contactsService.CreateContacts(contactDto);
 
             // Act
@@ -68,6 +68,24 @@ namespace TechChallenge_ControleContatos.Test.Controller
             }
 
 
+        }
+
+        [Fact, Trait("Category", "Integration")]
+        public async Task CreateContacts_ShouldReturnOkResult_WhenGetToken()
+        {
+            // Arrange
+            var client = new HttpClient();
+            var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:5217/api/Token");
+            request.Headers.Add("accept", "*/*");
+            var content = new StringContent("{\n  \"username\": \"Admin\",\n  \"passwordvalue\": \"1234\",\n  \"roletype\": 0\n}", null, "application/json");
+            request.Content = content;
+            var response = await client.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+            var result = await response.Content.ReadAsStringAsync();
+
+            // Assert
+            Assert.IsType<string>(result);
+            Assert.NotNull(result);
         }
     }
 }

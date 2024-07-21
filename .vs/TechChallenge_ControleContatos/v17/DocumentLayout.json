@@ -41,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|c:\\users\\codezombie\\downloads\\tc2\\techchallenge\\techchallenge_controlecontatos.test\\service\\contactservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|solutionrelative:techchallenge_controlecontatos.test\\service\\contactservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|c:\\users\\codezombie\\downloads\\tc2\\techchallenge\\techchallenge_controlecontatos.test\\integrated\\tokenclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23E47D1B-857B-47FE-B13C-2006AB930AA3}|TechChallenge_ControleContatos.Test\\TechChallenge_ControleContatos.Test.csproj|solutionrelative:techchallenge_controlecontatos.test\\integrated\\tokenclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -88,7 +84,7 @@
               "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Test\\Integrated\\IntegratedTest.cs",
               "ToolTip": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Test\\Integrated\\IntegratedTest.cs",
               "RelativeToolTip": "TechChallenge_ControleContatos.Test\\Integrated\\IntegratedTest.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAqwBkAAAAtAAAA",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAmwFkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-13T14:37:01.312Z",
               "EditorCaption": ""
@@ -176,18 +172,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-13T14:50:49.832Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TokenClient.cs",
-              "DocumentMoniker": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Test\\Integrated\\TokenClient.cs",
-              "RelativeDocumentMoniker": "TechChallenge_ControleContatos.Test\\Integrated\\TokenClient.cs",
-              "ToolTip": "C:\\Users\\CodeZombie\\Downloads\\tc2\\TechChallenge\\TechChallenge_ControleContatos.Test\\Integrated\\TokenClient.cs",
-              "RelativeToolTip": "TechChallenge_ControleContatos.Test\\Integrated\\TokenClient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T14:37:56.451Z"
             }
           ]
         }
