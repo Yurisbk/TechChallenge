@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechChallenge_ControleContatos.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e07787e589b2ff0e3d1823a59a47fbea723b268")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77438e8951400358ba538cffc90aa769e9f3af5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechChallenge_ControleContatos.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechChallenge_ControleContatos.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

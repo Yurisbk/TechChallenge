@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TechChallenge_ControleContatos.Controllers;
 using TechChallenge_ControleContatos.Infra.Mapping;
+using TechChallenge_ControleContatos.JWT;
 using TechChallenge_ControleContatos.Service.DTO;
 using TechChallenge_ControleContatos.Service.Interface;
 using Xunit;
@@ -68,24 +69,6 @@ namespace TechChallenge_ControleContatos.Test.Controller
             }
 
 
-        }
-
-        [Fact, Trait("Category", "Integration")]
-        public async Task CreateContacts_ShouldReturnOkResult_WhenGetToken()
-        {
-            // Arrange
-            var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:5217/api/Token");
-            request.Headers.Add("accept", "*/*");
-            var content = new StringContent("{\n  \"username\": \"Admin\",\n  \"passwordvalue\": \"1234\",\n  \"roletype\": 0\n}", null, "application/json");
-            request.Content = content;
-            var response = await client.SendAsync(request);
-            response.EnsureSuccessStatusCode();
-            var result = await response.Content.ReadAsStringAsync();
-
-            // Assert
-            Assert.IsType<string>(result);
-            Assert.NotNull(result);
         }
     }
 }

@@ -13,7 +13,11 @@ using TechChallenge_ControleContatos.Service.Service;
 public class DatabaseFixture : IDisposable
 {
     public IContactsService ContactsService { get; private set; }
+
+    public IUsersService UsersService { get; private set; }
     public ILogger<ContactsInfoController> Logger { get; private set; }
+
+    public ILogger<TokenController> LoggerToken { get; private set; }
 
     public DatabaseFixture()
     {
@@ -30,6 +34,7 @@ public class DatabaseFixture : IDisposable
             builder.AddConsole();
         });
         Logger = loggerFactory.CreateLogger<ContactsInfoController>();
+        LoggerToken = loggerFactory.CreateLogger<TokenController>();
 
         // Get the connection string from configuration
         var connectionString = configuration.GetValue<string>("ConnectionStringPostgres");
@@ -44,6 +49,7 @@ public class DatabaseFixture : IDisposable
 
         // Initialize the ContactsService
         ContactsService = new ContactsService(contactsRepository, regionsRepository);
+        UsersService = new UserService(usersRepository);
     }
 
     public void Dispose()
