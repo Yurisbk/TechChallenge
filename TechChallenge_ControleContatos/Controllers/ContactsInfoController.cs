@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Prometheus;
+using System.Diagnostics;
 using TechChallenge_ControleContatos.Infra.Mapping;
 using TechChallenge_ControleContatos.Service.DTO;
 using TechChallenge_ControleContatos.Service.Interface;
@@ -18,6 +19,11 @@ namespace TechChallenge_ControleContatos.Controllers
         private static readonly Counter ErrorRequestsCounter =
         Metrics.CreateCounter("error_requests_total", "Total number of error requests");
 
+        private static readonly Histogram LatencyHistogram = Metrics.CreateHistogram("my_service_latency_seconds", "Histogram of latency in seconds.", new HistogramConfiguration
+        {
+            Buckets = Histogram.ExponentialBuckets(start: 0.001, factor: 2, count: 10) // e.g., 1ms to 512ms
+        });
+
 
         public ContactsInfoController(IContactsService contacts, ILogger<ContactsInfoController> logger)
         {
@@ -33,10 +39,14 @@ namespace TechChallenge_ControleContatos.Controllers
         [Authorize]
         public async Task<IActionResult> GetAllContacts()
         {
+            var stopwatch = Stopwatch.StartNew();
             _logger.LogInformation("Iniciando busca de todos os contatos");
             var allContacts = await _contacts.GetContacts();
             SuccessfulRequestsCounter.Inc();
             _logger.LogInformation("Busca de todos os contatos realizada com sucesso");
+            System.Threading.Thread.Sleep(new Random().Next(100, 500));
+            stopwatch.Stop();
+            LatencyHistogram.Observe(stopwatch.Elapsed.TotalSeconds);
             return Ok(allContacts);
             
         }
@@ -50,10 +60,14 @@ namespace TechChallenge_ControleContatos.Controllers
         [Authorize]
         public async Task<IActionResult> GetContact(int id)
         {
+            var stopwatch = Stopwatch.StartNew();
             _logger.LogInformation("Iniciando busca de um contato por id");
             var contact = await _contacts.GetContactsById(id);
             SuccessfulRequestsCounter.Inc();
             _logger.LogInformation("Busca de um contato por id realizado com sucesso");
+            System.Threading.Thread.Sleep(new Random().Next(100, 500));
+            stopwatch.Stop();
+            LatencyHistogram.Observe(stopwatch.Elapsed.TotalSeconds);
             return Ok(contact);
         }
 
@@ -66,6 +80,7 @@ namespace TechChallenge_ControleContatos.Controllers
         [Authorize]
         public async Task<IActionResult> CreateContacts(ContactDto contact)
         {
+            var stopwatch = Stopwatch.StartNew();
             _logger.LogInformation("Iniciando criacao de um contato");
             var contactCreated = await _contacts.CreateContacts(contact);
 
@@ -73,11 +88,17 @@ namespace TechChallenge_ControleContatos.Controllers
             {
                 _logger.LogError("DDD nao relacionado a uma regiao");
                 ErrorRequestsCounter.Inc();
+                System.Threading.Thread.Sleep(new Random().Next(100, 500));
+                stopwatch.Stop();
+                LatencyHistogram.Observe(stopwatch.Elapsed.TotalSeconds);
                 return BadRequest("DDD nao relacionado a uma regiao");
             }
 
             _logger.LogInformation("Contato criado com sucesso");
             SuccessfulRequestsCounter.Inc();
+            System.Threading.Thread.Sleep(new Random().Next(100, 500)); 
+            stopwatch.Stop();
+            LatencyHistogram.Observe(stopwatch.Elapsed.TotalSeconds);
             return Ok();
         }
 
@@ -90,6 +111,7 @@ namespace TechChallenge_ControleContatos.Controllers
         [Authorize]
         public async Task<IActionResult> UpdateContacts([FromBody] ContactDto contact)
         {
+            var stopwatch = Stopwatch.StartNew();
             _logger.LogInformation("Iniciando edicao de um contato");
             var contactUpdate = await _contacts.UpdateContacts(contact);
 
@@ -97,11 +119,17 @@ namespace TechChallenge_ControleContatos.Controllers
             {
                 _logger.LogError("O contato editado não existe");
                 ErrorRequestsCounter.Inc();
+                System.Threading.Thread.Sleep(new Random().Next(100, 500));
+                stopwatch.Stop();
+                LatencyHistogram.Observe(stopwatch.Elapsed.TotalSeconds);
                 return BadRequest("O contato editado não existe");
             }
 
             _logger.LogInformation("Contato editado com sucesso");
             SuccessfulRequestsCounter.Inc();
+            System.Threading.Thread.Sleep(new Random().Next(100, 500));
+            stopwatch.Stop();
+            LatencyHistogram.Observe(stopwatch.Elapsed.TotalSeconds);
             return Ok();
         }
 
@@ -114,10 +142,14 @@ namespace TechChallenge_ControleContatos.Controllers
         [Authorize]
         public async Task<IActionResult> DeleteContacts(int id)
         {
+            var stopwatch = Stopwatch.StartNew();
             _logger.LogInformation("Iniciando delecao de um contato");
             await _contacts.DeleteContacts(id);
             _logger.LogInformation("Contato deletado com sucesso");
             SuccessfulRequestsCounter.Inc();
+            System.Threading.Thread.Sleep(new Random().Next(100, 500));
+            stopwatch.Stop();
+            LatencyHistogram.Observe(stopwatch.Elapsed.TotalSeconds);
             return Ok("Contato deletado com sucesso");
         }
     }

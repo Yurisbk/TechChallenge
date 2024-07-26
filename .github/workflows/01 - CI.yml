@@ -11,7 +11,7 @@ on:
 
 jobs:
   dockerhub:
-    name: Executando primeiro job
+    name: Build and push
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,8 +31,9 @@ jobs:
           push: true
 
   build_and_test:
-    name: Executando segundo job
+    name: Build and Test
     runs-on: ubuntu-latest
+
     services:
       postgres:
         image: postgres:latest
@@ -47,6 +48,8 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
+        volumes:
+          - ./scripts:/docker-entrypoint-initdb.d
 
     steps:
       - name: Checkout code
@@ -56,6 +59,24 @@ jobs:
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: '8.0.204'
+
+      - name: Install PostgreSQL client
+        run: sudo apt-get update && sudo apt-get install -y postgresql-client
+
+      - name: Wait for PostgreSQL to be ready
+        run: |
+          for i in {1..30}; do
+            if pg_isready -h localhost -p 5432 -U root -d root; then
+              break
+            fi
+            echo "Waiting for PostgreSQL..."
+            sleep 1
+          done
+
+      - name: Run database initialization script
+        run: psql -h localhost -U root -d root -f scripts/docker-database-initial.sql
+        env:
+          PGPASSWORD: root
 
       - name: Restore dependencies
         run: dotnet restore
@@ -68,3 +89,8 @@ jobs:
 
       - name: Run integration tests
         run: dotnet test --no-build --filter Category=Integration --verbosity normal
+        env:
+          PGPASSWORD: root
+
+
+          

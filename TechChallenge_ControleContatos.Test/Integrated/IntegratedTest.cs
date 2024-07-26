@@ -1,31 +1,73 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using TechChallenge_ControleContatos.Controllers;
+using TechChallenge_ControleContatos.Infra.Mapping;
+using TechChallenge_ControleContatos.JWT;
+using TechChallenge_ControleContatos.Service.DTO;
+using TechChallenge_ControleContatos.Service.Interface;
+using Xunit;
 
-namespace TechChallenge_ControleContatos.Test.Integrated
+namespace TechChallenge_ControleContatos.Test.Controller
 {
-    public class IntegratedTest
+    public class ContactsInfoTests : IClassFixture<DatabaseFixture>
     {
-        [Fact, Category("Integration")]
-        public async Task CapturaComSucessoTodosContatos()
+        private readonly IContactsService _contactsService;
+        private readonly ILogger<ContactsInfoController> _logger;
+        private readonly ContactsInfoController _controller;
+
+        public ContactsInfoTests(DatabaseFixture fixture)
         {
-            var httpClient = new HttpClient();
-            var tokenClient = new TokenClient();
-            var contactsClient = new ContactsClient(httpClient);
+            _contactsService = fixture.ContactsService;
+            _logger = fixture.Logger;
+            _controller = new ContactsInfoController(_contactsService, _logger);
+        }
 
-            string username = "Admin";
-            string password = "1234";
-            int roleType = 0;
+        [Fact, Trait("Category", "Integration")]
+        public async Task GetAllContacts_ShouldReturnOkResult_WithListOfContacts()
+        {
+            // Arrange
+            var contactDto = new ContactDto { Id = 1, Fullname = "Mano Doe", Ddd = "11", Ddi = "55", Email = "teste@123.com", Phonenumber = "973645921" };
+            await _contactsService.CreateContacts(contactDto);
 
-            string token = await tokenClient.GetTokenAsync(username, password, roleType);
-            Console.WriteLine($"Token: {token}");
+            // Act
+            var result = await _controller.GetAllContacts();
 
-            var x = await contactsClient.GetAllContacts(token);
+            // Assert
+            var okResult = Assert.IsType<OkObjectResult>(result);
+            var returnContacts = Assert.IsAssignableFrom<IEnumerable<Contact>>(okResult.Value); 
+        }
 
-            Assert.NotNull(x);
+        [Fact, Trait("Category", "Integration")]
+        public async Task CreateContacts_ShouldReturnOkResult_WhenContactIsCreated()
+        {
+            // Arrange
+            var contactDto = new ContactDto { Id = 1, Fullname = "John Doe", Ddd = "11", Ddi = "55", Email = "teste@123.com", Phonenumber = "973645921" };
+
+            // Act
+            var result = await _controller.CreateContacts(contactDto);
+
+            // Assert
+            var okResult = Assert.IsType<OkResult>(result);
+        }
+
+        [Fact, Trait("Category", "Integration")]
+        public async Task CreateContacts_ShouldReturnOkResult_WhenContactIsDeleted()
+        {
+            // Arrange
+            var contactDto = new ContactDto { Id = 1, Fullname = "John Doe", Ddd = "11", Ddi = "55", Email = "teste@123.com", Phonenumber = "973645921" };
+            var contactsList = await _contactsService.GetContacts();
+
+            // Act
+            if(contactsList is not null)
+            {
+                var result = await _controller.DeleteContacts(contactsList.FirstOrDefault().id);
+
+                // Assert
+                var okResult = Assert.IsType<OkObjectResult>(result);
+            }
+
 
         }
     }

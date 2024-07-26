@@ -23,7 +23,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             _controller = new TokenController(_tokenServiceMock.Object);
         }
 
-        [Fact, Category("Unity")]
+        [Fact, Trait("Category", "Unity")]
         public async Task Post_ShouldReturnOkResult_WithToken_WhenUserAuthenticationIsSuccessful()
         {
             // Arrange
@@ -39,7 +39,7 @@ namespace TechChallenge_ControleContatos.Test.Controller
             Assert.Equal(expectedToken, okResult.Value);
         }
 
-        [Fact, Category("Unity")]
+        [Fact, Trait("Category", "Unity")]
         public async Task Post_ShouldReturnUnauthorizedResult_WhenUserAuthenticationFails()
         {
             // Arrange
